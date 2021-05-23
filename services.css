@@ -1,0 +1,113 @@
+.main-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.main-image img {
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.main-image p {
+    font-family: 'Poppins Light';
+    font-size: 14px;
+    width: 75%;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* MANICURE SERVICE STYLING */
+.manicure-container,
+.japanese-lifting-container,
+.make-up-container {
+    background-color: #F7F0F5;
+    border-radius: 30px;
+    height: 100vh;
+}
+.manicure-container .manicure,
+.lash-lifting-container .lash-lifting,
+.japanese-lifting-container .japanese-lifting,
+.make-up-container .make-up {
+    height: 100vh;
+    padding: 40px 0;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.manicure-container .manicure img {
+    width: 90px;
+}
+
+.manicure-container .manicure h2,
+.lash-lifting-container .lash-lifting h2,
+.japanese-lifting-container .japanese-lifting h2,
+.make-up-container .make-up h2 {
+    font-family: 'Playfair Display';
+    font-size: 24px;
+}
+
+.manicure-container .manicure p,
+.lash-lifting-container .lash-lifting p,
+.japanese-lifting-container .japanese-lifting p,
+.make-up-container .make-up p {
+    font-family: 'Poppins-Light';
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.manicure-container .manicure .manicure-prices,
+.lash-lifting-container .lash-lifting .lash-lifting-prices,
+.japanese-lifting-container .japanese-lifting .japanese-lifting-prices,
+.make-up-container .make-up .make-up-prices {
+    width: 100%;
+}
+
+.manicure-container .manicure .manicure-prices > div,
+.lash-lifting-container .lash-lifting .lash-lifting-prices > div,
+.japanese-lifting-container .japanese-lifting .japanese-lifting-prices > div,
+.make-up-container .make-up .make-up-prices div {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgb(191, 189, 189);
+}
+
+/* LASH LIFTING SERVICE STYLING */
+.lash-lifting-container .lash-lifting,
+.japanese-lifting-container .japanese-lifting,
+.make-up-container .make-up {
+    height: 520px;
+}
+
+.lash-lifting-container .lash-lifting img,
+.japanese-lifting-container .japanese-lifting img,
+.make-up-container .make-up img {
+    width: 150px;
+}
+
+/* .lash-lifting-container .lash-lifting .lash-lifting-prices > div {
+    padding: 8px 0;
+} */
+
+/* JAPANESE LIFTING STYLING */
+.japanese-lifting-container,
+.make-up-container {
+    height: auto;
+}
+
+/* MAKE-UP STYLING */
+
+.make-up-container {
+    background-color: #fff;
+    height: auto;
+}
