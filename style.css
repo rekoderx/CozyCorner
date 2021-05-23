@@ -454,10 +454,12 @@ aside {
     color: #555;
     padding: 56px 0;
 }
+
 .faq {
     font-family: 'Playfair Display';
     font-size: 32px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .faq-container {
@@ -468,20 +470,8 @@ aside {
 .faq-container .question-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-.question-container h3 {
-    margin-top: 10px;
-    font-family: 'Poppins';
-    font-size: 14px;
-    margin-bottom: 12px;
-    width: 80%;
-}
-
-.question-container img {
-    width: 16px;
-}
 
 .question p {
     font-family: 'Poppins Light';
@@ -492,10 +482,50 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
     padding: 24px 0;
     border-bottom: 1px solid #555;
 }
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    text-align: left;
+    background-color: #F7F0F5;
+    transition: 0.4s;
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: bolder;
+    color: #555;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion:after {
+    content: url(assets/images/arrow.svg);
+    font-size: 30px;
+    float: right;
+    transition-duration: 0.3s;
+    padding-left: 15px;
+
+}
+
+.active:after {
+    transform: rotate(180deg) scaleX(-1);
+    transition-duration: 0.3s;
+}
+
+
 
 /* FOOTER STYLING */
 #footer {
@@ -1474,9 +1504,6 @@ aside {
         order: 2;
     }
 
-    .map img {
-        width: 100%;
-    }
     
     .terms {
         margin-top: 32px;
@@ -1597,10 +1624,7 @@ aside {
     /* ARROW STYLING */
 
     /* FOOTER */
-    .map {
-        width: 60%;
-    }
-}
+  
 
 /* ****************** 1920px ********************** */
 
@@ -1911,9 +1935,6 @@ aside {
         order: 2;
     }
 
-    .map img {
-        width: 50%;
-    }
     
     .terms {
         margin-top: 32px;
