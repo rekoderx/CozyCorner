@@ -1367,6 +1367,8 @@ aside {
 
     .desktop-navbar-container .desktop-navbar img {
         width: 80px;
+        display: block;
+        padding-top: 4px;
     }
 
     .desktop-navbar-container .desktop-navbar ul {
@@ -1409,6 +1411,7 @@ aside {
         padding-bottom: 10px;
     }
     
+
     /* HERO IMAGE STYLING */
     .hero-image-container {
         width: 285px;
