@@ -211,6 +211,11 @@ aside {
     font-family: 'Playfair Display';
 }
 
+.menu-container a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .menu-container h2 {
     margin-top: 50px;
     text-align: center;
@@ -1219,6 +1224,11 @@ aside {
         width: 4%;
     }
 
+    .some-navbar img {
+        width: 14px;
+        height: 14px;
+    }
+
     /* desktop regular navbar */
     .desktop-navbar-container {
         width: 100%;
@@ -1625,7 +1635,7 @@ aside {
 
     /* FOOTER */
   
-
+}
 /* ****************** 1920px ********************** */
 
 @media screen and (min-width: 1536px) {
