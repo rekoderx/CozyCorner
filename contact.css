@@ -248,6 +248,24 @@ body {
    
 /* desktop 1024px end */
 
+@media only screen and (min-width: 1366px) {
+    
+    .main-buttons{
+        margin-left: 29%;
+        margin-top:  20%;
+    }
+    
+    .contact_text{
+        margin-right: 15%;
+        width: 30%;
+        margin-top: -30%;
+    }
+    
+    .contact_image_desktop{
+        width: 40%;
+        margin-left: 13%;
+    }
+}
 
 
 
