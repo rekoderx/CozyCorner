@@ -114,7 +114,7 @@ header {
 }
 
 /* MAIN TYTLE STYLING */
-.hero-text h1 {
+/*.hero-text h1 {
     display: inline-block;
     color: #A3939F;
     position: relative;
@@ -125,6 +125,101 @@ header {
     font-size: 60px;
     font-weight: 100;
 }
+*/
+
+#Layer_1 {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* SVG ANIMATION */
+
+.animate_h {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear forwards;
+}
+
+.animate_i {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 2s;
+}
+
+
+.animate_stroke {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 2.7s;
+}
+
+.animate_I {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear forwards;
+    animation-delay: 3s;
+}
+
+.animate_apos {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 4s;
+}
+
+.animate_m {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 4.5s;
+}
+
+.animate_E {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear forwards;
+    animation-delay: 5.5s;
+}
+
+.animate_l {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear forwards;
+    animation-delay: 6.5s;
+}
+
+.animate_e {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 7s;
+}
+
+.animate_n {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 7.5s;
+}
+
+
+.animate_a {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 8s;
+}
+
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 
 .hero-text p {
     display: inline-block;
@@ -132,7 +227,6 @@ header {
     font-family: 'Playfair Display';
     font-size: 14px;
     position: relative;
-    top: -35px;
     left: 45%;
     z-index: 7;
 }
@@ -615,13 +709,13 @@ aside {
     }
 
     /* MAIN TYTLE STYLING */
+    /*
     .hero-text h1 {
         left: 12%;
     }
-
+    */
     .hero-text p {
         font-size: 16px;
-        top: -20px;
     }
 
     /* MAIN BUTTONS STYLING */
@@ -712,15 +806,16 @@ aside {
     }
 
     /* MAIN TYTLE STYLING */
+    /*
     .hero-text h1 {
         font-size: 64px;
         top: -18px;
         left: 16%;
     }
+    */
 
     .hero-text p {
         font-size: 15px;
-        top: -28px;
     }
 
     /* MAIN BUTTONS STYLING */
@@ -849,15 +944,14 @@ aside {
     }
 
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         font-size: 66px;
         left: 15%;
         top: 20%;
     }
-
+    */
     .hero-text p {
         font-size: 18px;
-        top: -5px;
     }
 
     /* MAIN BUTTONS STYLING */
@@ -962,18 +1056,21 @@ aside {
     }
 
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: 0;
         left: 18%;
         font-size: 112px;
         font-weight: 100;
     }
+    */
+
+    #Layer_1 {
+        padding-top: 50px;
+    }
 
     .hero-text p {
         font-size: 24px;
         position: relative;
-        top: 70px;
-        left: -80px;
     }
 
     /* MAIN BUTTONS STYLING */
@@ -1306,8 +1403,12 @@ aside {
         padding-bottom: 10px;
         transition: all .2s ease-in-out;
     }
-
-
+    
+    .active_menu {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    
     /* HERO IMAGE STYLING */
     .hero-image-container {
         width: 285px;
@@ -1327,16 +1428,26 @@ aside {
     }
 
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: -300px;
         left: 8%;
         font-size: 104px;
+    }
+    */
+
+    #Layer_1 {
+        width: 45%;
+        margin: 0;
+        position: relative;
+        left: 8%;
+        top: -250px;
+        ;
     }
 
     .hero-text p {
         font-size: 20px;
         top: -235px;
-        left: -16%;
+        left: 32%;
     }
 
     /* MAIN BUTTONS STYLING */
@@ -1565,11 +1676,7 @@ aside {
     .terms .social-icons img {
         padding: 0 10px;
     }
-    
-    .social-icons img:hover {
-        transform: scale(1.1);
-        transition: 0.3s ease-in;
-    }
+
 }
 
 /* NORMAL SIZE SCREENS IPAD PRO 1024px x 1366px/
@@ -1590,15 +1697,21 @@ aside {
     }
 
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: -340px;
         left: 6%;
+    }
+    */
+
+    #Layer_1 {
+        top: -340px;
+        ;
     }
 
     .hero-text p {
         font-size: 22px;
-        top: -275px;
-        left: -20%;
+        top: -330px;
+        left: 30%;
     }
 
     /* MAIN BUTTONS STYLING */
@@ -1646,16 +1759,22 @@ aside {
     }
 
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: -400px;
         left: 10%;
         font-size: 140px;
     }
+    */
+
+    #Layer_1 {
+        top: -400px;
+        ;
+    }
 
     .hero-text p {
         font-size: 22px;
-        top: -320px;
-        left: -10%;
+        top: -380px;
+        left: 34%;
     }
 
     /* MAIN BUTTONS STYLING */
@@ -1765,16 +1884,22 @@ aside {
         }
 
         /* MAIN TYTLE STYLING */
-        .hero-text h1 {
+        /*.hero-text h1 {
             top: -500px;
             left: 15%;
             font-size: 170px;
         }
+        */
+
+        #Layer_1 {
+            top: -550px;
+            left: 12%;
+        }
 
         .hero-text p {
             font-size: 24px;
-            top: -400px;
-            left: -2%;
+            top: -500px;
+            left: 43%;
         }
 
         /* MAIN BUTTONS STYLING */
