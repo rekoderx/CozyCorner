@@ -1,0 +1,290 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL RULES */
+body {
+    font-family: 'Poppins';
+    position: relative;
+    color: #555;
+}
+
+/* INSERTING FONTS */
+@font-face {
+    font-family: 'Creattion Demo';
+    src: url(./assets/fonts/Creattion-Demo.otf);
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(./assets/fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins Light';
+    src: url(./assets/fonts/Poppins-Light.ttf);
+}
+
+/* Contact page styling for Iphone 6/7/8 */
+
+.hero-image-container{
+    
+}
+
+.image_contact{
+    width: 65%;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+/* text under the image start */
+
+.hero-text {
+    text-align: center;
+}
+
+.contact_text {
+    font-family: 'Poppins Light';
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero_text_contact {
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-size: 14px;
+    padding-top: 8%;
+    padding-bottom: 6%;
+}
+
+/* text under the image end */
+
+
+/* Button under the text start */
+/* Button under the text end */
+
+
+/* First business hours and contact start */
+
+
+.business_contact {
+    background-color: #F7F0F5;
+}
+
+.business_hours {
+    width: 80%;
+    margin: 0 auto;
+    padding: 32px 0;
+    font-family: 'Playfair Display';
+}
+
+.contact_up {
+    width: 80%;
+    margin: 0 auto;
+    padding: 32px 0;
+    font-family: 'Playfair Display';
+}
+
+.hr {
+    color: #333333;
+}
+
+/* First business hours and contact end */
+
+/* Contact me start */
+.contact_me_h3 {
+    font-family: 'Playfair Display';
+    padding-top: 15%;
+    padding-bottom: 7%
+}
+
+.contact_me_p {
+    font-family: 'Poppins Light';
+    padding-bottom: 15%;
+}
+
+.contact_me_div {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Poppins Light';
+
+}
+
+.name {
+    margin-bottom: 8%;
+    height: 40px;
+}
+
+.email {
+    margin-bottom: 8%;
+    height: 40px;
+}
+
+.message {
+    height: 150px;
+    margin-bottom: 15%;
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8C7787;
+    color: #fff;
+    border: none;
+    width: 166px;
+    height: 32px;
+    font-size: 11px;
+    font-family: 'Poppins Light';
+    margin: 0 auto;
+
+}
+
+.contact_me_section {
+    padding-bottom: 20%;
+}
+
+/* Contact me end */
+
+/* desktop 1024px start */
+@media only screen and (min-width: 1024px) {
+
+    /* image,text,button start */
+    
+    .hero-image-container {
+        top: 40px;
+        left: -20%;
+    }
+    
+    .contact_text{
+        margin-right: 3%;
+        margin-top: -35%;
+        font-size: 20px;
+        width: 40%;
+        text-align: left;
+        
+    }
+    
+    .services-prices{
+        
+    }
+    
+    .main-buttons{
+        margin-left: 36%;
+        margin-top: -2%;
+    }
+    
+    .arrow{
+        
+    }
+    
+    #header{
+        margin-bottom: -10%;
+    }
+     /* image,text,button end */
+    
+     /* business, contact desktop start */
+    
+    .business_hours{
+        width: 60%;
+    }
+    
+    .contact_up{
+        width: 60%;
+    }
+    
+    
+     /* business, contact desktop end */
+    
+    /* contact form desktop start */
+    .form{
+        width: 60%;
+    }
+    
+    .button{
+         width: 200px;
+    height: 40px;
+    font-size: 16px;
+    }
+    
+    .contact_me_h3{
+        margin-top: -10%;
+        margin-bottom: -5%;
+        font-size: 30px;
+    }
+    
+    .contact_me_p{
+        margin-bottom: -10%;
+    }
+    /* contact form desktop end */
+    
+     /* desktop contact image start */
+    .contact_image_desktop{
+        width: 50%;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+    
+    .button{
+        margin-top: -5%;
+        margin-bottom: -15%;
+    }
+    /* desktop contact image end */
+}
+   
+/* desktop 1024px end */
+
+@media only screen and (min-width: 1366px) {
+    
+    .main-buttons{
+        margin-left: 29%;
+        margin-top:  20%;
+    }
+    
+    .contact_text{
+        margin-right: 15%;
+        width: 30%;
+        margin-top: -30%;
+    }
+    
+    .contact_image_desktop{
+        width: 40%;
+        margin-left: 13%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

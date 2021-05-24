@@ -45,6 +45,7 @@ body {
 header {
     height: 100vh;
 }
+
 #main-header {
     width: 85%;
     margin: 0 auto;
@@ -52,6 +53,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 .hamburger-menu .line {
     width: 38px;
     height: 4px;
@@ -84,8 +86,8 @@ header {
     background-image: linear-gradient(to bottom, #F7F0F5, #DCD2D8);
     border: none;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
 .hero-image-container .square1 {
@@ -107,12 +109,12 @@ header {
     width: 290px;
     z-index: 6;
     position: absolute;
-    top:-32%;
+    top: -32%;
     left: -25%;
 }
 
 /* MAIN TYTLE STYLING */
-.hero-text h1 {
+/*.hero-text h1 {
     display: inline-block;
     color: #A3939F;
     position: relative;
@@ -123,6 +125,101 @@ header {
     font-size: 60px;
     font-weight: 100;
 }
+*/
+
+#Layer_1 {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* SVG ANIMATION */
+
+.animate_h {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 1.5s linear forwards;
+}
+
+.animate_i {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear forwards;
+    animation-delay: 1.2s;
+}
+
+
+.animate_stroke {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear forwards;
+    animation-delay: 1.7s;
+}
+
+.animate_I {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 1.5s linear forwards;
+    animation-delay: 2s;
+}
+
+.animate_apos {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.animate_m {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 4s linear forwards;
+    animation-delay: 2.8s;
+}
+
+.animate_E {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 1.8s linear forwards;
+    animation-delay: 3.5s;
+}
+
+.animate_l {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 2s linear forwards;
+    animation-delay: 4.4s;
+}
+
+.animate_e {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 5s;
+}
+
+.animate_n {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 5.5s;
+}
+
+
+.animate_a {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear forwards;
+    animation-delay: 5.8s;
+}
+
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 
 .hero-text p {
     display: inline-block;
@@ -130,7 +227,6 @@ header {
     font-family: 'Playfair Display';
     font-size: 14px;
     position: relative;
-    top: -35px;
     left: 45%;
     z-index: 7;
 }
@@ -147,7 +243,7 @@ header {
     width: 166px;
     height: 32px;
     font-size: 11px;
-    font-family: 'Poppins Light';
+    font-family: 'Poppins';
     margin-top: 15px;
 }
 
@@ -233,6 +329,7 @@ aside {
 .offer-giftcard h3 {
     font-size: 14px;
     font-weight: 100;
+    letter-spacing: 0.2em;
 }
 
 .offer-giftcard p {
@@ -254,7 +351,7 @@ aside {
     border: 1px solid #fff;
     background-color: #8C7787;
     color: #fff;
-    
+
 }
 
 .offer-giftcard .offer-container,
@@ -266,7 +363,7 @@ aside {
     justify-content: center;
     align-items: center;
     width: 100%;
-} 
+}
 
 .offer-giftcard .offer-container {
     background-color: #F7F0F5;
@@ -324,11 +421,24 @@ aside {
 .services h3 {
     font-family: 'Poppins Light';
     font-size: 16px;
+    margin-top: 20px;
 }
+
+.services_link {
+    text-decoration: none;
+    color: #333;
+}
+
 
 .services-container img {
     width: 120px;
 }
+
+.services-container img:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in;
+}
+
 
 .services-container button {
     background-color: #8C7787;
@@ -371,10 +481,10 @@ aside {
     border: 1px solid #333;
     width: 166px;
     height: 32px;
-    color: #555;
+    color: #333;
     font-size: 11px;
     margin-bottom: 32px;
-    background-color: #fff;
+    background-color: #F7F0F5;
 }
 
 /* REVIEWS STYLING */
@@ -382,6 +492,7 @@ aside {
     padding: 64px 0;
     height: auto;
 }
+
 .review-slider {
     position: relative;
 }
@@ -593,82 +704,83 @@ aside {
     #main-header img {
         margin-top: 10%;
     }
-    
+
     .hero-image-container .square {
         margin-top: 30%;
     }
-    
+
     .hero-image-container img {
-        top:-26%;
+        top: -26%;
     }
-    
+
     /* MAIN TYTLE STYLING */
+    /*
     .hero-text h1 {
         left: 12%;
     }
-    
+    */
     .hero-text p {
         font-size: 16px;
-        top: -20px;
     }
-    
+
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         margin-top: 40px;
     }
+
     .main-buttons button {
         height: 35px;
     }
-    
+
     /* ARROW STYLING */
     .arrow {
         margin-top: 30px;
     }
-    
+
     /* MENU PAGE DARK STYLING */
     #main-header-dark img {
         margin-top: 10%;
     }
-    
+
     /* MAIN PAGE STYLING */
     .offer-giftcard .offer-container p {
-        margin: 50px 0;
+        margin: 30px 0;
     }
-    
+
     .offer-giftcard .giftcard-container p {
-        margin: 50px 0;
+        margin: 30px 0;
     }
-    
+
     /* SERVICES STYLING */
-    
+
     /* INSTAGRAM STYLING */
-    
+
     /* REVIEWS STYLING */
     .reviews-container {
         height: 700px;
     }
-    
+
     .reviews-container h4 {
         bottom: 1px;
         right: 18%;
     }
-    
+
     /* FAQ STYLING */
-    
+
     /* FOOTER STYLING */
-    
+
     .footer-container {
         padding: 56px 0;
     }
-    
+
     .contact {
         margin-top: 56px;
     }
-    
+
     .map {
         margin-top: 56px;
     }
-    
+
     .terms {
         margin-top: 56px;
     }
@@ -680,83 +792,90 @@ aside {
         margin-top: 5%;
         width: 100px;
     }
+
     .hero-image-container {
         width: 210px;
         height: 210px;
     }
-    
+
     .hero-image-container .square {
         margin-top: 25%;
         width: 210px;
         height: 210px;
     }
-    
+
     .hero-image-container img {
         width: 310px;
-        top:-28%;
+        top: -28%;
         left: -23%;
     }
-    
+
     /* MAIN TYTLE STYLING */
+    /*
     .hero-text h1 {
         font-size: 64px;
         top: -18px;
         left: 16%;
     }
-    
+    */
+
     .hero-text p {
         font-size: 15px;
-        top: -28px;
     }
-    
+
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         margin-top: 20px;
     }
+
     .main-buttons button {
         height: 34px;
     }
-    
+
     /* ARROW STYLING */
     .arrow {
         width: 15px;
         margin: 10px auto;
     }
-    
+
     .arrow img {
         width: 15px;
     }
-    
+
     /* MENU PAGE DARK STYLING */
     #main-header-dark {
         width: 85%;
     }
-    
+
     #main-header-dark img {
         width: 100px;
     }
-    
+
     #main-header-dark .x {
         font-size: 37px;
     }
-    
+
     .menu-container h2 {
         font-size: 30px;
     }
-    
+
     /* MAIN PAGE STYLING */
     .offer-giftcard h3 {
         font-size: 15px;
     }
-    
+
     .offer-giftcard button {
         height: 35px;
     }
-    
+
     .offer-giftcard .offer-container p {
-        font-size: 34px;
+        font-size: 40px;
     }
-    
+
+    .offer-giftcard .giftcard-container p {
+        font-size: 38px;
+    }
+
     /* SERVICES STYLING */
     .services {
         gap: 20px;
@@ -765,38 +884,38 @@ aside {
     .services-container img {
         width: 140px;
     }
-    
+
     .services-container button {
         height: 35px;
     }
-    
+
     /* INSTAGRAM STYLING */
     .instagram-container button {
         height: 35px;
     }
-    
+
     /* REVIEWS STYLING */
-    
-    
+
+
     /* FAQ STYLING */
     .question-container h3 {
         margin-bottom: 14px;
     }
-    
+
     /* FOOTER STYLING */
-    
+
     .footer-container {
         padding: 40px 0;
     }
-    
+
     .contact {
         margin-top: 40px;
     }
-    
+
     .map {
         margin-top: 40px;
     }
-    
+
     .terms {
         margin-top: 48px;
     }
@@ -807,64 +926,68 @@ aside {
     #main-header img {
         margin-top: 10%;
     }
-    
+
     .hero-image-container .square {
         margin-top: 30%;
     }
+
     .hero-image-container {
         width: 260px;
         height: 260px;
     }
-    
+
     .hero-image-container .square {
         margin-top: 30%;
         width: 260px;
         height: 260px;
     }
-    
+
     .hero-image-container img {
         width: 360px;
         top: -16%;
         left: -46px;
     }
-    
+
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         font-size: 66px;
         left: 15%;
         top: 20%;
     }
-    
+    */
     .hero-text p {
         font-size: 18px;
-        top: -5px;
     }
-    
+
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         margin-top: 64px;
     }
+
     .main-buttons button {
         height: 36px;
         width: 186px;
     }
-    
+
     /* ARROW STYLING */
     .arrow {
         margin-top: 20px;
     }
-    
+
     /* MENU PAGE DARK STYLING */
 
     /* MAIN PAGE STYLING */
     .offer-giftcard .offer-container p {
-        margin: 50px 0;
+        font-size: 48px;
+        margin: 20px 0 50px 0;
     }
-    
+
     .offer-giftcard .giftcard-container p {
-        margin: 50px 0;
+        font-size: 46px;
+        margin: 20px 0 50px 0;
     }
-    
+
+
     /* SERVICES STYLING */
     .services {
         gap: 30px;
@@ -873,12 +996,12 @@ aside {
     .services-container img {
         width: 150px;
     }
-    
+
     .services-container button {
         height: 36px;
         width: 186px;
     }
-    
+
     /* INSTAGRAM STYLING */
     .instagram-container button {
         height: 36px;
@@ -888,10 +1011,11 @@ aside {
     .instagram-container {
         height: 736px;
     }
+
     /* REVIEWS STYLING */
-    
+
     /* FAQ STYLING */
-    
+
     /* FOOTER STYLING */
     #footer {
         height: auto;
@@ -903,128 +1027,133 @@ aside {
     #main-header {
         width: 80%;
     }
+
     .hamburger-menu .line {
         width: 48px;
         height: 5px;
     }
-    
+
     .hamburger-menu .line2 {
         margin: 8px 0;
     }
-    
+
     #main-header img {
         margin-top: 4%;
         width: 120px;
     }
-    
+
     /* HERO IMAGE STYLING */
     .hero-image-container {
         margin: 5% auto;
         width: 360px;
         height: 360px;
     }
-    
+
     .hero-image-container .square {
         width: 360px;
         height: 360px;
     }
-    
+
     .hero-image-container img {
         width: 480px;
-        top:-20%;
+        top: -20%;
         left: -15%;
     }
-    
+
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: 0;
         left: 18%;
         font-size: 112px;
         font-weight: 100;
     }
-    
+    */
+
+    #Layer_1 {
+        padding-top: 50px;
+    }
+
     .hero-text p {
         font-size: 24px;
         position: relative;
-        top: 70px;
-        left: -80px;
     }
-    
+
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         flex-direction: row;
         justify-content: center;
         margin-top: 100px;
     }
+
     .main-buttons button {
         width: 236px;
         height: 48px;
         font-size: 14px;
         margin: 0 20px;
     }
-    
+
     /* ARROW STYLING */
     .arrow {
         width: 24px;
         margin: 0 auto;
         margin-top: 40px;
     }
-    
+
     .arrow img {
         width: 24px;
     }
-    
+
     /* MENU PAGE DARK STYLING */
-    
+
     #main-header-dark {
         width: 80%;
     }
-    
+
     #main-header-dark img {
         margin-top: 5%;
         width: 120px;
     }
-    
+
     #main-header-dark .x {
         font-size: 48px;
     }
-    
+
     .menu-container {
         margin-top: 200px;
     }
-    
+
     .menu-container h2 {
         margin-top: 70px;
         font-size: 40px;
     }
-    
+
     /* MAIN PAGE STYLING */
     .offer-giftcard h3 {
         font-size: 18px;
     }
-    
+
     .offer-giftcard button {
         width: 236px;
         height: 48px;
         font-size: 14px;
     }
-    
+
     .offer-giftcard .offer-container p {
         font-size: 48px;
         margin: 48px 0;
     }
-    
+
     .offer-giftcard .giftcard-container p {
         font-size: 48px;
-        margin: 32px 0;
+        margin: 48px 0;
     }
-    
+
     /* SERVICES STYLING */
     .services-container {
         height: auto;
         padding: 96px 0;
     }
-    
+
     .services {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1032,25 +1161,25 @@ aside {
         gap: 32px;
         margin: 96px 0;
     }
-    
+
     .services-container h2 {
         font-size: 40px;
     }
-    
+
     .services h3 {
         font-size: 20px;
     }
-    
+
     .services-container img {
         width: 200px;
     }
-    
+
     .services-container button {
         width: 236px;
         height: 48px;
         font-size: 14px;
     }
-    
+
     /* INSTAGRAM STYLING */
     .instagram-container {
         height: auto;
@@ -1060,41 +1189,41 @@ aside {
     .instagram-container .instagram {
         margin: 48px 0;
     }
-    
+
     .instagram-container h2 {
         font-size: 40px;
     }
-    
+
     .instagram-container .title h4 {
         font-size: 18px;
     }
-    
+
     .instagram-container button {
         width: 236px;
         height: 48px;
         font-size: 14px;
     }
-    
+
     /* REVIEWS STYLING */
     .reviews-container {
         height: auto;
     }
-    
+
     .reviews-container h2 {
         font-size: 40px;
         margin-top: 15%;
     }
-    
+
     .reviews-container .review-text {
         position: relative;
         margin: 40px 0 72px 0;
     }
-    
+
     .reviews-container .review-text p {
         font-size: 16px;
     }
-    
-    
+
+
     /* FAQ STYLING */
     #faq {
         padding: 72px 0;
@@ -1103,73 +1232,73 @@ aside {
     .faq {
         font-size: 40px;
     }
-    
+
     .faq-container {
         width: 80%;
         margin: 0 auto;
     }
-    
+
     .faq-container .question-container {
         width: 100%;
     }
-    
+
     .question-container h3 {
         margin-top: 18px;
         font-size: 18px;
         margin-bottom: 16px;
         width: 70%;
     }
-    
+
     .question-container img {
         width: 18px;
     }
-    
+
     .question p {
         font-size: 16px;
     }
-    
+
     .question {
         padding: 32px 0;
     }
-    
+
     /* FOOTER STYLING */
     #footer {
         background-color: #8C7787;
         color: #fff;
         height: auto;
     }
-    
+
     .footer-container {
         padding: 40px 0;
     }
-    
+
     .business-hours h3,
     .contact h3 {
         font-size: 24px;
     }
-    
+
     .days-hours,
     .contact-details {
         padding: 5px 0;
     }
-    
+
     .days-hours h5,
     .contact-details h5 {
         font-size: 18px;
     }
-    
+
     .days-hours p {
         font-size: 18px;
     }
-    
+
     .contact {
         margin-top: 40px;
     }
-    
+
     .map {
         margin-top: 40px;
     }
-    
+
     .terms {
         margin-top: 40px;
     }
@@ -1178,7 +1307,8 @@ aside {
 /* NORMAL SIZE SCREENS 1024px *********************/
 /* ********************************************** */
 
-@media only screen  and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
+
     /* desktop mini navbar */
     #main-header {
         display: none;
@@ -1247,6 +1377,8 @@ aside {
 
     .desktop-navbar-container .desktop-navbar img {
         width: 80px;
+        display: block;
+        padding-top: 4px;
     }
 
     .desktop-navbar-container .desktop-navbar ul {
@@ -1267,87 +1399,115 @@ aside {
         height: 36px;
         font-family: 'Poppins';
         font-size: 12px;
-        color: #8C7787;
-        background-color: #fff;
-        border: none;
+        color: #fff;
+        background-color: #8C7787;
+        border: 2px solid white;
+    }
+
+    .nav_menu {
+        text-decoration: none;
+        color: #fff;
+        padding: 6px;
+    }
+
+    .nav_menu:hover {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        transition: all .2s ease-in-out;
     }
     
+    .active_menu {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    
+
     /* HERO IMAGE STYLING */
     .hero-image-container {
         width: 285px;
         top: 2%;
         left: 24%;
     }
-    
+
     .hero-image-container .square {
         width: 285px;
         height: 285px;
     }
-    
+
     .hero-image-container img {
         width: 450px;
         top: -42%;
         left: -27%;
     }
-    
+
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: -300px;
         left: 8%;
         font-size: 104px;
     }
-    
+    */
+
+    #Layer_1 {
+        width: 45%;
+        margin: 0;
+        position: relative;
+        left: 8%;
+        top: -250px;
+        ;
+    }
+
     .hero-text p {
         font-size: 20px;
         top: -235px;
-        left: -16%;
+        left: 32%;
     }
-    
+
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         flex-direction: row;
         justify-content: center;
         width: 60%;
     }
-    
+
     .main-buttons button {
         width: 186px;
         height: 36px;
         font-size: 12px;
         margin-top: -300px;
     }
-    
+
     .main-buttons .book-appointment {
         margin-right: 24px;
     }
-    
+
     /* ARROW STYLING */
     .arrow {
         width: 18px;
         margin: -40px auto;
     }
-    
+
     .arrow img {
         width: 18px;
     }
-    
+
     /* MENU PAGE DARK STYLING */
     aside {
         display: none;
     }
-    
+
     /* MAIN PAGE STYLING */
     .offer-giftcard {
         flex-direction: row;
     }
-    
-    
+
+
     /* SERVICES STYLING */
     .services-container {
         height: auto;
         padding: 64px 0;
     }
-    
+
     .services {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1355,27 +1515,27 @@ aside {
         gap: 80px;
         margin: 80px 0;
     }
-    
+
     .services h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
-    
+
     .services-container img {
         width: 160px;
     }
-    
+
     .services-container button {
         width: 186px;
         height: 36px;
         font-size: 12px;
     }
-    
+
     /* INSTAGRAM STYLING */
     .instagram-container {
         height: auto;
         padding: 64px 0;
     }
-    
+
     .instagram-container h2 {
         font-size: 32px;
     }
@@ -1383,11 +1543,11 @@ aside {
     .instagram-container .title {
         margin-bottom: 56px;
     }
-    
+
     .instagram-container .title h4 {
         font-size: 16px;
     }
-    
+
     .instagram-container button {
         width: 186px;
         height: 36px;
@@ -1395,7 +1555,7 @@ aside {
         margin-top: 56px;
         border: 1px solid #8C7787;
     }
-    
+
     /* REVIEWS STYLING */
     .reviews-container {
         height: 100vh;
@@ -1404,24 +1564,24 @@ aside {
         justify-content: space-around;
         align-items: center;
     }
-    
+
     .reviews-container h2 {
         font-family: 'Playfair Display';
         font-size: 32px;
         margin-top: -15%;
     }
-    
+
     .reviews-container .review-text img {
         display: block;
         width: 90%;
         margin: 0 auto;
     }
-    
+
     .reviews-container .review-text {
         position: relative;
         margin-top: -60%;
     }
-    
+
     .reviews-container .review-text p {
         width: 60%;
         font-family: 'Poppins Light';
@@ -1430,22 +1590,23 @@ aside {
         top: 30%;
         left: 22%;
     }
-    
+
     .reviews-container h4 {
         position: absolute;
         bottom: 4%;
         right: 20%;
     }
-    
-    
+
+
     /* FAQ STYLING */
     #faq {
         padding: 64px 0;
     }
+
     .faq {
         margin-bottom: 32px;
     }
-    
+
     .faq-container {
         width: 50%;
     }
@@ -1453,15 +1614,15 @@ aside {
     .question-container {
         width: 100%;
     }
-    
+
     .question-container h3 {
         font-size: 16px;
     }
-    
+
     .question p {
         font-size: 14px;
     }
-    
+
     /* FOOTER STYLING */
     #footer {
         height: auto;
@@ -1475,27 +1636,27 @@ aside {
         grid-template-rows: 1fr 1fr;
         column-gap: 150px;
     }
-    
+
     .business-hours h3,
     .contact h3 {
         font-size: 20px;
         padding: 0 0 8px 0;
         margin-bottom: 12px;
     }
-    
+
     .days-hours,
     .contact-details {
         display: flex;
         justify-content: space-between;
         padding: 3px 0;
     }
-    
+
     .days-hours h5,
     .contact-details h5 {
         font-family: 'Poppins Light';
         font-size: 14px;
     }
-    
+
     .days-hours p {
         font-family: 'Poppins Light';
         font-size: 14px;
@@ -1504,17 +1665,17 @@ aside {
     .business-hours {
         margin-top: 32px;
     }
-    
+
     .contact {
         margin-top: 32px;
     }
-    
+
     .map {
         margin: 20px 0 40px 0;
         order: 2;
     }
 
-    
+
     .terms {
         margin-top: 32px;
         align-items: flex-start;
@@ -1528,6 +1689,7 @@ aside {
     .terms .social-icons img {
         padding: 0 10px;
     }
+
 }
 
 /* NORMAL SIZE SCREENS IPAD PRO 1024px x 1366px/
@@ -1540,25 +1702,31 @@ aside {
     header {
         height: auto;
     }
-    
+
     .hero-image-container img {
         width: 450px;
         top: -2%;
         left: -27%;
     }
-    
+
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: -340px;
         left: 6%;
     }
-    
+    */
+
+    #Layer_1 {
+        top: -340px;
+        ;
+    }
+
     .hero-text p {
         font-size: 22px;
-        top: -275px;
-        left: -20%;
+        top: -330px;
+        left: 30%;
     }
-    
+
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         flex-direction: row;
@@ -1568,18 +1736,18 @@ aside {
         position: absolute;
         top: 10%;
     }
-    
+
     .main-buttons button {
         width: 186px;
         height: 36px;
         font-size: 12px;
         margin-top: 0;
     }
-    
+
     .main-buttons .book-appointment {
         margin-right: 24px;
     }
-    
+
     /* ARROW STYLING */
     .arrow {
         display: none;
@@ -1596,26 +1764,32 @@ aside {
     header {
         height: 100vh;
     }
-    
+
     .hero-image-container img {
         width: 450px;
         top: -55%;
         left: -27%;
     }
-    
+
     /* MAIN TYTLE STYLING */
-    .hero-text h1 {
+    /*.hero-text h1 {
         top: -400px;
         left: 10%;
         font-size: 140px;
     }
-    
+    */
+
+    #Layer_1 {
+        top: -400px;
+        ;
+    }
+
     .hero-text p {
         font-size: 22px;
-        top: -320px;
-        left: -10%;
+        top: -380px;
+        left: 34%;
     }
-    
+
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         flex-direction: row;
@@ -1678,285 +1852,344 @@ aside {
         height: 88px;
     }
 
-    .desktop-navbar-container .desktop-navbar {
-        width: 100%;
-        height: 88px;
-        margin: 0 auto;
-    }
-
-    .desktop-navbar-container .desktop-navbar img {
-        width: 88px;
-    }
-
-    .desktop-navbar-container .desktop-navbar ul {
-        font-size: 16px;
-        margin-left: -560px;
-    }
-
-    .desktop-navbar-container .desktop-navbar ul li {
-        margin-right: 72px;
-    }
-
-    .desktop-navbar-container .desktop-navbar button {
-        width: 186px;
-        height: 36px;
-    }
-    
-    /* HERO IMAGE STYLING */
-    .hero-image-container {
-        width: 385px;
-        /* top: -10%; */
-        /* left: 24%; */
-    }
-    
-    .hero-image-container .square {
-        width: 385px;
-        height: 385px;
-        top: -70px;
-        left: 0;
-    }
-    
-    .hero-image-container img {
-        width: 600px;
-        top: -70%;
-        left: -20%;
-    }
-    
-    /* MAIN TYTLE STYLING */
-    .hero-text h1 {
-        top: -500px;
-        left: 15%;
-        font-size: 170px;
-    }
-    
-    .hero-text p {
-        font-size: 24px;
-        top: -400px;
-        left: -2%;
-    }
-    
-    /* MAIN BUTTONS STYLING */
-    .main-buttons {
-        margin-left: 50px;
-        margin-top: 100px;
-    }
-
-    .main-buttons button {
-        width: 186px;
-        height: 36px;
-        font-size: 12px;
-    }
-    
     .main-buttons .book-appointment {
         margin-right: 24px;
     }
-    
+
     /* ARROW STYLING */
-    .arrow {
-        width: 18px;
-        margin: -200px auto;
-    }
-    
-    .arrow img {
-        width: 18px;
-    }
-    
-    /* MENU PAGE DARK STYLING */
-    aside {
-        display: none;
-    }
-    
-    /* MAIN PAGE STYLING */
-    .offer-giftcard {
-        flex-direction: row;
-    }
-    
-    
-    /* SERVICES STYLING */
-    .services-container {
-        height: auto;
-        padding: 64px 0;
-    }
-    
-    .services {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 80px;
-        margin: 80px 0;
-    }
-    
-    .services h3 {
-        font-size: 20px;
-    }
-    
-    .services-container img {
-        width: 160px;
-    }
-    
-    .services-container button {
-        width: 186px;
-        height: 36px;
-        font-size: 12px;
-    }
-    
-    /* INSTAGRAM STYLING */
-    .instagram-container {
-        height: auto;
-        padding: 64px 0;
-    }
-    
-    .instagram-container h2 {
-        font-size: 32px;
-    }
 
-    .instagram-container .title {
-        margin-bottom: 56px;
-    }
-    
-    .instagram-container .title h4 {
-        font-size: 16px;
-    }
-    
-    .instagram-container button {
-        width: 186px;
-        height: 36px;
-        font-size: 12px;
-        margin-top: 56px;
-        border: 1px solid #8C7787;
-    }
-    
-    /* REVIEWS STYLING */
-    .reviews-container {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .reviews-container h2 {
-        font-family: 'Playfair Display';
-        font-size: 32px;
-        margin-top: -15%;
-    }
-    
-    .reviews-container .review-text img {
-        display: block;
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    .reviews-container .review-text {
-        position: relative;
-        margin-top: -60%;
-    }
-    
-    .reviews-container .review-text p {
-        width: 60%;
-        font-family: 'Poppins Light';
-        font-size: 14px;
-        position: absolute;
-        top: 30%;
-        left: 22%;
-    }
-    
-    .reviews-container h4 {
-        position: absolute;
-        bottom: 4%;
-        right: 20%;
-    }
-    
-    
-    /* FAQ STYLING */
-    #faq {
-        padding: 64px 0;
-    }
-    .faq {
-        margin-bottom: 32px;
-    }
-    
-    .faq-container {
-        width: 50%;
-    }
+    /* FOOTER */
 
-    .question-container {
-        width: 100%;
-    }
-    
-    .question-container h3 {
-        font-size: 16px;
-    }
-    
-    .question p {
-        font-size: 14px;
-    }
-    
-    /* FOOTER STYLING */
-    #footer {
-        height: auto;
-    }
 
-    .footer-container {
-        max-width: 1536px;
-        width: 80%;
-        display: grid;
-        padding: 0;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        column-gap: 150px;
-    }
-    
-    .business-hours h3,
-    .contact h3 {
-        font-size: 20px;
-        padding: 0 0 8px 0;
-        margin-bottom: 12px;
-    }
-    
-    .days-hours,
-    .contact-details {
-        display: flex;
-        justify-content: space-between;
-        padding: 3px 0;
-    }
-    
-    .days-hours h5,
-    .contact-details h5 {
-        font-family: 'Poppins Light';
-        font-size: 14px;
-    }
-    
-    .days-hours p {
-        font-family: 'Poppins Light';
-        font-size: 14px;
-    }
+    /* ****************** 1920px ********************** */
 
-    .business-hours {
-        margin-top: 32px;
-    }
-    
-    .contact {
-        margin-top: 32px;
-    }
-    
-    .map {
-        margin: 20px 0 40px 0;
-        order: 2;
-    }
+    @media screen and (min-width: 1536px) {
+        .desktop-navbar-container {
+            max-width: 1536px;
+            margin: 0 auto;
+        }
 
-    
-    .terms {
-        margin-top: 32px;
-        align-items: flex-start;
-    }
+        .desktop {
+            background-color: #8C7787;
+        }
 
-    .terms h5 {
-        margin-bottom: 10px;
-        font-size: 14px;
-    }
+        .mini-navbar {
+            max-width: 1536px;
+        }
 
-    .terms .social-icons img {
-        padding: 0 10px;
+        .mini-navbar .info-navbar {
+            width: 22%;
+        }
+
+        .mini-navbar .info-navbar .mail p,
+        .mini-navbar .info-navbar .phone p {
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .mini-navbar img {
+            width: 14px;
+            height: 14px;
+        }
+
+        .some-navbar {
+            width: 5%;
+        }
+
+        /* desktop regular navbar */
+        .desktop-navbar-container {
+            width: 100%;
+            background-color: #8C7787;
+            height: 88px;
+        }
+
+        .desktop-navbar-container .desktop-navbar {
+            width: 100%;
+            height: 88px;
+            margin: 0 auto;
+        }
+
+        .desktop-navbar-container .desktop-navbar img {
+            width: 88px;
+        }
+
+        .desktop-navbar-container .desktop-navbar ul {
+            font-size: 16px;
+            margin-left: -560px;
+        }
+
+        .desktop-navbar-container .desktop-navbar ul li {
+            margin-right: 72px;
+        }
+
+        .desktop-navbar-container .desktop-navbar button {
+            width: 186px;
+            height: 36px;
+        }
+
+        /* HERO IMAGE STYLING */
+        .hero-image-container {
+            width: 385px;
+            /* top: -10%; */
+            /* left: 24%; */
+        }
+
+        .hero-image-container .square {
+            width: 385px;
+            height: 385px;
+            top: -70px;
+            left: 0;
+        }
+
+        .hero-image-container img {
+            width: 600px;
+            top: -70%;
+            left: -20%;
+        }
+
+        /* MAIN TYTLE STYLING */
+        /*.hero-text h1 {
+            top: -500px;
+            left: 15%;
+            font-size: 170px;
+        }
+        */
+
+        #Layer_1 {
+            top: -550px;
+            left: 12%;
+        }
+
+        .hero-text p {
+            font-size: 24px;
+            top: -500px;
+            left: 43%;
+        }
+
+        /* MAIN BUTTONS STYLING */
+        .main-buttons {
+            margin-left: 50px;
+            margin-top: 100px;
+        }
+
+        .main-buttons button {
+            width: 186px;
+            height: 36px;
+            font-size: 12px;
+        }
+
+        .main-buttons .book-appointment {
+            margin-right: 24px;
+        }
+
+        /* ARROW STYLING */
+        .arrow {
+            width: 18px;
+            margin: -200px auto;
+        }
+
+        .arrow img {
+            width: 18px;
+        }
+
+        /* MENU PAGE DARK STYLING */
+        aside {
+            display: none;
+        }
+
+        /* MAIN PAGE STYLING */
+        .offer-giftcard {
+            flex-direction: row;
+        }
+
+
+        /* SERVICES STYLING */
+        .services-container {
+            height: auto;
+            padding: 64px 0;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 80px;
+            margin: 80px 0;
+        }
+
+        .services h3 {
+            font-size: 18px;
+        }
+
+        .services-container img {
+            width: 160px;
+        }
+
+        .services-container button {
+            width: 186px;
+            height: 36px;
+            font-size: 12px;
+        }
+
+        /* INSTAGRAM STYLING */
+        .instagram-container {
+            height: auto;
+            padding: 64px 0;
+        }
+
+        .instagram-container h2 {
+            font-size: 32px;
+        }
+
+        .instagram-container .title {
+            margin-bottom: 56px;
+        }
+
+        .instagram-container .title h4 {
+            font-size: 16px;
+        }
+
+        .instagram-container button {
+            width: 186px;
+            height: 36px;
+            font-size: 12px;
+            margin-top: 56px;
+            border: 1px solid #8C7787;
+        }
+
+        /* REVIEWS STYLING */
+        .reviews-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .reviews-container h2 {
+            font-family: 'Playfair Display';
+            font-size: 32px;
+            margin-top: -15%;
+        }
+
+        .reviews-container .review-text img {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .reviews-container .review-text {
+            position: relative;
+            margin-top: -60%;
+        }
+
+        .reviews-container .review-text p {
+            width: 60%;
+            font-family: 'Poppins Light';
+            font-size: 14px;
+            position: absolute;
+            top: 30%;
+            left: 22%;
+        }
+
+        .reviews-container h4 {
+            position: absolute;
+            bottom: 4%;
+            right: 20%;
+        }
+
+
+        /* FAQ STYLING */
+        #faq {
+            padding: 64px 0;
+        }
+
+        .faq {
+            margin-bottom: 32px;
+        }
+
+        .faq-container {
+            width: 50%;
+        }
+
+        .question-container {
+            width: 100%;
+        }
+
+        .question-container h3 {
+            font-size: 16px;
+        }
+
+        .question p {
+            font-size: 14px;
+        }
+
+        /* FOOTER STYLING */
+        #footer {
+            height: auto;
+        }
+
+        .footer-container {
+            max-width: 1536px;
+            width: 80%;
+            display: grid;
+            padding: 0;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            column-gap: 150px;
+        }
+
+        .business-hours h3,
+        .contact h3 {
+            font-size: 20px;
+            padding: 0 0 8px 0;
+            margin-bottom: 12px;
+        }
+
+        .days-hours,
+        .contact-details {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+        }
+
+        .days-hours h5,
+        .contact-details h5 {
+            font-family: 'Poppins Light';
+            font-size: 14px;
+        }
+
+        .days-hours p {
+            font-family: 'Poppins Light';
+            font-size: 14px;
+        }
+
+        .business-hours {
+            margin-top: 32px;
+        }
+
+        .contact {
+            margin-top: 32px;
+        }
+
+        .map {
+            margin: 20px 0 40px 0;
+            order: 2;
+        }
+
+
+        .terms {
+            margin-top: 32px;
+            align-items: flex-start;
+        }
+
+        .terms h5 {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .terms .social-icons img {
+            padding: 0 10px;
+        }
     }
 }
