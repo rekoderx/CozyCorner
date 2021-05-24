@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-+
-
-=======
->>>>>>> Stashed changes
 /* RESET */
 * {
     margin: 0;
@@ -40,6 +35,16 @@ body {
 
 /* Contact page styling for Iphone 6/7/8 */
 
+.hero-image-container{
+    
+}
+
+.image_contact{
+    width: 65%;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
 /* text under the image start */
 
 .hero-text {
@@ -48,6 +53,8 @@ body {
 
 .contact_text {
     font-family: 'Poppins Light';
+    width: 80%;
+    margin: 0 auto;
 }
 
 .hero_text_contact {
@@ -130,19 +137,10 @@ body {
 .message {
     height: 150px;
     margin-bottom: 15%;
-<<<<<<< Updated upstream
-    align-content: ---------
 }
 
 .button {
     display: flex;
-=======
-    align-content:---------
-}
-
-.button{
-   display: flex;
->>>>>>> Stashed changes
     justify-content: space-around;
     align-items: center;
     background-color: #8C7787;
@@ -153,7 +151,6 @@ body {
     font-size: 11px;
     font-family: 'Poppins Light';
     margin: 0 auto;
-<<<<<<< Updated upstream
 
 }
 
@@ -174,9 +171,11 @@ body {
     }
     
     .contact_text{
-        margin-right: -60%;
+        margin-right: 3%;
         margin-top: -35%;
         font-size: 20px;
+        width: 40%;
+        text-align: left;
         
     }
     
@@ -185,9 +184,17 @@ body {
     }
     
     .main-buttons{
-        margin-left: 50%
+        margin-left: 36%;
+        margin-top: -2%;
     }
     
+    .arrow{
+        
+    }
+    
+    #header{
+        margin-bottom: -10%;
+    }
      /* image,text,button end */
     
      /* business, contact desktop start */
@@ -214,14 +221,31 @@ body {
     font-size: 16px;
     }
     
+    .contact_me_h3{
+        margin-top: -10%;
+        margin-bottom: -5%;
+        font-size: 30px;
+    }
+    
+    .contact_me_p{
+        margin-bottom: -10%;
+    }
     /* contact form desktop end */
     
+     /* desktop contact image start */
+    .contact_image_desktop{
+        width: 50%;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
     
-    
-    
+    .button{
+        margin-top: -5%;
+        margin-bottom: -15%;
+    }
+    /* desktop contact image end */
 }
-
-
+   
 /* desktop 1024px end */
 
 
@@ -246,12 +270,3 @@ body {
 
 
 
-=======
-    
-}
-
-.contact_me_section{
-    padding-bottom: 20%;
-}
-/* Contact me end */
->>>>>>> Stashed changes
