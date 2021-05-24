@@ -138,71 +138,71 @@ header {
 .animate_h {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 3s linear forwards;
+    animation: dash 1.5s linear forwards;
 }
 
 .animate_i {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 5s linear forwards;
-    animation-delay: 2s;
+    animation: dash 3s linear forwards;
+    animation-delay: 1.2s;
 }
 
 
 .animate_stroke {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 5s linear forwards;
-    animation-delay: 2.7s;
+    animation: dash 3s linear forwards;
+    animation-delay: 1.7s;
 }
 
 .animate_I {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 3s linear forwards;
-    animation-delay: 3s;
+    animation: dash 1.5s linear forwards;
+    animation-delay: 2s;
 }
 
 .animate_apos {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 5s linear forwards;
-    animation-delay: 4s;
+    animation: dash 3s linear forwards;
+    animation-delay: 2.5s;
 }
 
 .animate_m {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 5s linear forwards;
-    animation-delay: 4.5s;
+    animation: dash 4s linear forwards;
+    animation-delay: 2.8s;
 }
 
 .animate_E {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 3s linear forwards;
-    animation-delay: 5.5s;
+    animation: dash 1.8s linear forwards;
+    animation-delay: 3.5s;
 }
 
 .animate_l {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash 3s linear forwards;
-    animation-delay: 6.5s;
+    animation: dash 2s linear forwards;
+    animation-delay: 4.4s;
 }
 
 .animate_e {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
     animation: dash 5s linear forwards;
-    animation-delay: 7s;
+    animation-delay: 5s;
 }
 
 .animate_n {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
     animation: dash 5s linear forwards;
-    animation-delay: 7.5s;
+    animation-delay: 5.5s;
 }
 
 
@@ -210,7 +210,7 @@ header {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
     animation: dash 5s linear forwards;
-    animation-delay: 8s;
+    animation-delay: 5.8s;
 }
 
 
