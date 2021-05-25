@@ -34,16 +34,20 @@ body {
 }
 
 /* HEADER STYLING */
-.mini-navbar {
+
+.desktop {
     display: none;
 }
 
-.desktop-navbar {
-    display: none;
-}
-
-header {
+#header {
     height: 100vh;
+    position: relative;
+}
+
+.header-container {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
 }
 
 #main-header {
@@ -71,64 +75,86 @@ header {
 }
 
 /* HERO IMAGE STYLING */
-.hero-image-container {
-    margin: 12% auto;
-    width: 190px;
-    height: 190px;
-    position: relative;
+.hero {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.7fr 1fr 0.3fr;
+    grid-template-areas:
+        "area1"
+        "area2"
+        "area3";
 }
 
-.hero-image-container .square {
-    margin-top: 20%;
-    width: 190px;
-    height: 190px;
-    opacity: 0.4;
-    background-image: linear-gradient(to bottom, #F7F0F5, #DCD2D8);
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-image-container { 
+    grid-area: area1;
+    margin: 0 auto;
+    width: 70%; 
+    align-self: flex-end;
 }
 
-.hero-image-container .square1 {
-    z-index: 5;
-}
-
-.hero-image-container .square2 {
-    z-index: 4;
-    transform: rotate(-12deg);
-}
-
-.hero-image-container .square3 {
-    z-index: 3;
-    transform: rotate(-24deg);
-}
+.text-buttons { grid-area: area2; }
+.arrow { grid-area: area3; }
 
 .hero-image-container img {
-    display: block;
-    width: 290px;
-    z-index: 6;
-    position: absolute;
-    top: -32%;
-    left: -25%;
+    width: 100%;
 }
 
-/* MAIN TYTLE STYLING */
-/*.hero-text h1 {
-    display: inline-block;
-    color: #A3939F;
-    position: relative;
-    top: -20px;
-    left: 13%;
-    z-index: 7;
-    font-family: 'Creattion Demo';
-    font-size: 60px;
-    font-weight: 100;
+.text-buttons {
+    margin-top: -40px;
 }
-*/
+
+.text-buttons .main-buttons {
+    margin-top: 32px;
+}
+
+.tagline {
+    width: 60%;
+    margin: 0 auto;
+    text-align: right;
+    color: #333;
+    font-family: 'Playfair Display';
+    font-size: 14px;
+}
+
+.arrow {
+    margin: 0 auto;
+}
+
+.arrow img {
+    width: 12px;
+}
+
+/* MAIN BUTTONS STYLING */
+.main-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-buttons button {
+    width: 166px;
+    height: 32px;
+    font-size: 11px;
+    font-family: 'Poppins';
+    margin-top: 15px;
+}
+
+.main-buttons .book-appointment {
+    background-color: #8C7787;
+    color: #fff;
+    border: none;
+}
+
+.main-buttons .services-prices {
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #555;
+}
 
 #Layer_1 {
-    width: 70%;
+    width: 80%;
     display: flex;
     margin: 0 auto;
 }
@@ -218,56 +244,6 @@ header {
     to {
         stroke-dashoffset: 0;
     }
-}
-
-
-.hero-text p {
-    display: inline-block;
-    color: #333;
-    font-family: 'Playfair Display';
-    font-size: 14px;
-    position: relative;
-    left: 45%;
-    z-index: 7;
-}
-
-/* MAIN BUTTONS STYLING */
-.main-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.main-buttons button {
-    width: 166px;
-    height: 32px;
-    font-size: 11px;
-    font-family: 'Poppins';
-    margin-top: 15px;
-}
-
-.main-buttons .book-appointment {
-    background-color: #8C7787;
-    color: #fff;
-    border: none;
-}
-
-.main-buttons .services-prices {
-    background-color: #fff;
-    color: #555;
-    border: 1px solid #555;
-}
-
-/* ARROW STYLING */
-.arrow {
-    width: 14px;
-    margin: 0 auto;
-    margin-top: 10px;
-}
-
-.arrow img {
-    width: 14px;
 }
 
 /* MENU PAGE DARK STYLING */
@@ -553,7 +529,7 @@ aside {
 
 .review-slider .review-wrapper .review .review-container p {
     font-family: 'Poppins Light';
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.6;
     max-width: 100%;
 }
@@ -699,44 +675,63 @@ aside {
 }
 
 /* MEDIA QUERIES ********************************* */
-/* IPHONE X & IPHONE 11 PRO 375x812 */
+/* IPHONE X  375x812 */
 @media screen and (min-width: 375px) and (min-height: 736px) {
-    #main-header img {
-        margin-top: 10%;
+    
+    /* HERO IMAGE STYLING */
+    .hero {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.8fr 0.9fr 0.3fr;
+        grid-template-areas:
+            "area1"
+            "area2"
+            "area3";
     }
-
-    .hero-image-container .square {
-        margin-top: 30%;
+    
+    .hero-image-container {
+        width: 85%;
     }
-
-    .hero-image-container img {
-        top: -26%;
+    
+    .text-buttons { grid-area: area2; }
+    .arrow { grid-area: area3; }
+    
+    .text-buttons {
+        margin-top: -50px;
     }
-
-    /* MAIN TYTLE STYLING */
-    /*
-    .hero-text h1 {
-        left: 12%;
+    
+    .text-buttons .main-buttons {
+        margin-top: 52px;
     }
-    */
-    .hero-text p {
-        font-size: 16px;
-    }
-
+    
     /* MAIN BUTTONS STYLING */
     .main-buttons {
-        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
-
+    
     .main-buttons button {
-        height: 35px;
+        width: 166px;
+        height: 32px;
+        font-size: 11px;
+        font-family: 'Poppins';
+        margin-top: 15px;
     }
-
-    /* ARROW STYLING */
-    .arrow {
-        margin-top: 30px;
+    
+    .main-buttons .book-appointment {
+        background-color: #8C7787;
+        color: #fff;
+        border: none;
     }
-
+    
+    .main-buttons .services-prices {
+        background-color: #fff;
+        color: #555;
+        border: 1px solid #555;
+    }
     /* MENU PAGE DARK STYLING */
     #main-header-dark img {
         margin-top: 10%;
@@ -751,24 +746,10 @@ aside {
         margin: 30px 0;
     }
 
-    /* SERVICES STYLING */
-
-    /* INSTAGRAM STYLING */
-
-    /* REVIEWS STYLING */
-    .reviews-container {
-        height: 700px;
-    }
-
-    .reviews-container h4 {
-        bottom: 1px;
-        right: 18%;
-    }
-
-    /* FAQ STYLING */
-
     /* FOOTER STYLING */
-
+    #footer {
+        height: auto;
+    }
     .footer-container {
         padding: 56px 0;
     }
@@ -788,58 +769,41 @@ aside {
 
 /* IPHONE 6/7/8 PLUS 414x736*/
 @media screen and (min-width: 414px) and (min-height: 736px) {
-    #main-header img {
-        margin-top: 5%;
-        width: 100px;
+    /* HERO IMAGE STYLING */
+    .hero {
+        grid-template-rows: 1.7fr 1fr 0.3fr;
     }
-
+    
     .hero-image-container {
-        width: 210px;
-        height: 210px;
+        width: 70%;
     }
-
-    .hero-image-container .square {
-        margin-top: 25%;
-        width: 210px;
-        height: 210px;
-    }
-
-    .hero-image-container img {
-        width: 310px;
-        top: -28%;
-        left: -23%;
-    }
-
-    /* MAIN TYTLE STYLING */
-    /*
-    .hero-text h1 {
-        font-size: 64px;
-        top: -18px;
-        left: 16%;
-    }
-    */
-
-    .hero-text p {
-        font-size: 15px;
-    }
-
+    
     /* MAIN BUTTONS STYLING */
     .main-buttons {
-        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
-
+    
     .main-buttons button {
-        height: 34px;
+        width: 166px;
+        height: 32px;
+        font-size: 11px;
+        font-family: 'Poppins';
+        margin-top: 15px;
     }
-
-    /* ARROW STYLING */
-    .arrow {
-        width: 15px;
-        margin: 10px auto;
+    
+    .main-buttons .book-appointment {
+        background-color: #8C7787;
+        color: #fff;
+        border: none;
     }
-
-    .arrow img {
-        width: 15px;
+    
+    .main-buttons .services-prices {
+        background-color: #fff;
+        color: #555;
+        border: 1px solid #555;
     }
 
     /* MENU PAGE DARK STYLING */
@@ -923,67 +887,31 @@ aside {
 
 /* IPHONE 11 414x896 */
 @media screen and (min-width: 414px) and (min-height: 896px) {
-    #main-header img {
-        margin-top: 10%;
+    .hero {
+        grid-template-rows: 1.8fr 0.9fr 0.3fr;
     }
-
-    .hero-image-container .square {
-        margin-top: 30%;
-    }
-
+    
     .hero-image-container {
-        width: 260px;
-        height: 260px;
+        width: 85%;
     }
-
-    .hero-image-container .square {
-        margin-top: 30%;
-        width: 260px;
-        height: 260px;
-    }
-
-    .hero-image-container img {
-        width: 360px;
-        top: -16%;
-        left: -46px;
-    }
-
-    /* MAIN TYTLE STYLING */
-    /*.hero-text h1 {
-        font-size: 66px;
-        left: 15%;
-        top: 20%;
-    }
-    */
-    .hero-text p {
-        font-size: 18px;
-    }
-
+    
     /* MAIN BUTTONS STYLING */
-    .main-buttons {
-        margin-top: 64px;
-    }
-
     .main-buttons button {
-        height: 36px;
         width: 186px;
-    }
-
-    /* ARROW STYLING */
-    .arrow {
+        height: 40px;
+        font-size: 12px;
+        letter-spacing: 1px;
         margin-top: 20px;
     }
 
-    /* MENU PAGE DARK STYLING */
-
     /* MAIN PAGE STYLING */
     .offer-giftcard .offer-container p {
-        font-size: 48px;
+        font-size: 40px;
         margin: 20px 0 50px 0;
     }
 
     .offer-giftcard .giftcard-container p {
-        font-size: 46px;
+        font-size: 40px;
         margin: 20px 0 50px 0;
     }
 
@@ -1024,83 +952,37 @@ aside {
 
 /* IPAD 768x1024 **********************/
 @media screen and (min-width: 768px) and (min-height: 1024px) {
-    #main-header {
-        width: 80%;
+    .hero {
+        grid-template-rows: 1.8fr 0.9fr 0.3fr;
     }
-
-    .hamburger-menu .line {
-        width: 48px;
-        height: 5px;
-    }
-
-    .hamburger-menu .line2 {
-        margin: 8px 0;
-    }
-
-    #main-header img {
-        margin-top: 4%;
-        width: 120px;
-    }
-
-    /* HERO IMAGE STYLING */
+    
     .hero-image-container {
-        margin: 5% auto;
-        width: 360px;
-        height: 360px;
+        width: 60%;
     }
-
-    .hero-image-container .square {
-        width: 360px;
-        height: 360px;
-    }
-
-    .hero-image-container img {
-        width: 480px;
-        top: -20%;
-        left: -15%;
-    }
-
-    /* MAIN TYTLE STYLING */
-    /*.hero-text h1 {
-        top: 0;
-        left: 18%;
-        font-size: 112px;
-        font-weight: 100;
-    }
-    */
 
     #Layer_1 {
         padding-top: 50px;
     }
 
-    .hero-text p {
-        font-size: 24px;
-        position: relative;
+    .hero-text {
+        margin-top: -50px;
     }
 
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         flex-direction: row;
         justify-content: center;
-        margin-top: 100px;
     }
 
     .main-buttons button {
         width: 236px;
-        height: 48px;
+        height: 56px;
         font-size: 14px;
         margin: 0 20px;
     }
 
-    /* ARROW STYLING */
-    .arrow {
-        width: 24px;
-        margin: 0 auto;
-        margin-top: 40px;
-    }
-
     .arrow img {
-        width: 24px;
+        width: 20px;
     }
 
     /* MENU PAGE DARK STYLING */
@@ -1205,23 +1087,23 @@ aside {
     }
 
     /* REVIEWS STYLING */
-    .reviews-container {
+    /* .review-container {
         height: auto;
     }
 
-    .reviews-container h2 {
+    .review-container h2 {
         font-size: 40px;
         margin-top: 15%;
     }
 
-    .reviews-container .review-text {
+    .review-container .review-text {
         position: relative;
         margin: 40px 0 72px 0;
     }
 
-    .reviews-container .review-text p {
+    .review-container .review-text p {
         font-size: 16px;
-    }
+    } */
 
 
     /* FAQ STYLING */
@@ -1314,62 +1196,29 @@ aside {
         display: none;
     }
 
-    .mini-navbar {
-        width: 90%;
-        margin: 8px auto 8px auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    #header {
+        height: 100vh;
     }
 
-    .mini-navbar .info-navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 28%;
-    }
-
-    .mini-navbar .info-navbar .mail,
-    .mini-navbar .info-navbar .phone {
-        display: flex;
-        align-items: center;
-    }
-
-    .mini-navbar .info-navbar .mail p,
-    .mini-navbar .info-navbar .phone p {
-        font-family: 'Poppins Light';
-        font-size: 10px;
-        margin-left: 8px;
-    }
-
-    .mini-navbar img {
-        width: 12px;
-        height: 12px;
-    }
-
-    .some-navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 4%;
-    }
-
-    .some-navbar img {
-        width: 14px;
-        height: 14px;
-    }
-
-    /* desktop regular navbar */
-    .desktop-navbar-container {
+    .desktop {
+        position: absolute;
+        display: block;
         width: 100%;
         background-color: #8C7787;
+    }
+
+    .desktop-navbar-container {
+        width: 90%;
+        margin: 0 auto;
         height: 88px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .desktop-navbar-container .desktop-navbar {
-        width: 90%;
         height: 88px;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1384,18 +1233,19 @@ aside {
     .desktop-navbar-container .desktop-navbar ul {
         list-style: none;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         color: #fff;
         font-family: 'Playfair Display';
         font-size: 14px;
-        margin-left: -220px;
     }
 
     .desktop-navbar-container .desktop-navbar ul li {
-        margin-right: 40px;
+        margin-left: 20px;
     }
 
     .desktop-navbar-container .desktop-navbar button {
-        width: 186px;
+        width: 166px;
         height: 36px;
         font-family: 'Poppins';
         font-size: 12px;
@@ -1420,80 +1270,134 @@ aside {
         border-bottom: 1px solid white;
         padding-bottom: 10px;
     }
+
+    .desktop-navbar-container .info {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .desktop-navbar-container .info .mail,
+    .desktop-navbar-container .info .phone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .desktop-navbar-container .info .mail img,
+    .desktop-navbar-container .info .phone img {
+        margin-right: 12px;
+        padding: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .desktop-navbar-container .info .mail p,
+    .desktop-navbar-container .info .phone p {
+        font-family: 'Poppins Light';
+        font-weight: 100;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .desktop-navbar-container .info .social-media {
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .desktop-navbar-container .info .social-media img {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        margin-left: -.5px;
+    }
+
+    /* #header {
+        height: 100vh;
+        position: relative;
+    } */
     
-
+    .header-container {
+        display: none;
+    }
+    
     /* HERO IMAGE STYLING */
-    .hero-image-container {
-        width: 285px;
-        top: 2%;
-        left: 24%;
+    .hero {
+        height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 0.8fr 1fr;
+        grid-template-rows: 1fr 1.4fr 0.6fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "area1 area1 area2 area2"
+            "area1 area1 area2 area2"
+            "area3 area3 area3 area3";
     }
-
-    .hero-image-container .square {
-        width: 285px;
-        height: 285px;
+    
+    .hero-image-container { 
+        grid-area: area2;
+        margin: 0 auto;
+        width: 70%; 
+        align-self: flex-end;
     }
-
+    
+    .text-buttons { 
+        grid-area: area1; 
+        align-self: flex-end;
+    }
+    
     .hero-image-container img {
-        width: 450px;
-        top: -42%;
-        left: -27%;
+        width: 110%;
     }
+    
+    /* .text-buttons .main-buttons {
+        margin-top: 32px;
+    } */
 
-    /* MAIN TYTLE STYLING */
-    /*.hero-text h1 {
-        top: -300px;
-        left: 8%;
-        font-size: 104px;
+    .hero-text {
+        margin-bottom: 120px;
     }
-    */
 
     #Layer_1 {
-        width: 45%;
-        margin: 0;
-        position: relative;
-        left: 8%;
-        top: -250px;
-        ;
+        width: 80%;
+        display: flex;
+        /* margin: 0 auto 100px 0; */
     }
-
-    .hero-text p {
+    
+    .tagline {
+        width: 100%;
+        text-align: right;
         font-size: 20px;
-        top: -235px;
-        left: 32%;
     }
-
+    
+    .arrow {
+        align-self: center;
+        grid-area: area3;
+        margin: 0 auto;
+    }
+    
+    .arrow img {
+        width: 12px;
+    }
+    
     /* MAIN BUTTONS STYLING */
     .main-buttons {
         flex-direction: row;
         justify-content: center;
-        width: 60%;
+        margin-bottom: 40px;
     }
-
+    
     .main-buttons button {
-        width: 186px;
-        height: 36px;
+        width: 196px;
+        height: 44px;
         font-size: 12px;
-        margin-top: -300px;
-    }
-
-    .main-buttons .book-appointment {
-        margin-right: 24px;
-    }
-
-    /* ARROW STYLING */
-    .arrow {
-        width: 18px;
-        margin: -40px auto;
-    }
-
-    .arrow img {
-        width: 18px;
-    }
-
-    /* MENU PAGE DARK STYLING */
-    aside {
-        display: none;
+        margin-left: 32px;
     }
 
     /* MAIN PAGE STYLING */
@@ -1557,7 +1461,7 @@ aside {
     }
 
     /* REVIEWS STYLING */
-    .reviews-container {
+    .review-container {
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -1565,24 +1469,24 @@ aside {
         align-items: center;
     }
 
-    .reviews-container h2 {
+    .review-container h2 {
         font-family: 'Playfair Display';
         font-size: 32px;
         margin-top: -15%;
     }
 
-    .reviews-container .review-text img {
+    .review-container .review-text img {
         display: block;
         width: 90%;
         margin: 0 auto;
     }
 
-    .reviews-container .review-text {
+    .review-container .reviews-text {
         position: relative;
         margin-top: -60%;
     }
 
-    .reviews-container .review-text p {
+    .review-container .reviews-text p {
         width: 60%;
         font-family: 'Poppins Light';
         font-size: 14px;
@@ -1591,7 +1495,7 @@ aside {
         left: 22%;
     }
 
-    .reviews-container h4 {
+    .review-container h4 {
         position: absolute;
         bottom: 4%;
         right: 20%;
@@ -1692,504 +1596,138 @@ aside {
 
 }
 
-/* NORMAL SIZE SCREENS IPAD PRO 1024px x 1366px/
-/* ********************************************** */
-@media only screen and (min-width: 1024px) and (min-height: 1366px) {
-    #main-header {
-        display: none;
-    }
-
-    header {
-        height: auto;
-    }
-
-    .hero-image-container img {
-        width: 450px;
-        top: -2%;
-        left: -27%;
-    }
-
-    /* MAIN TYTLE STYLING */
-    /*.hero-text h1 {
-        top: -340px;
-        left: 6%;
-    }
-    */
-
-    #Layer_1 {
-        top: -340px;
-        ;
-    }
-
-    .hero-text p {
-        font-size: 22px;
-        top: -330px;
-        left: 30%;
-    }
-
-    /* MAIN BUTTONS STYLING */
-    .main-buttons {
-        flex-direction: row;
-        justify-content: center;
-        width: 60%;
-        margin: 0;
-        position: absolute;
-        top: 10%;
-    }
-
-    .main-buttons button {
-        width: 186px;
-        height: 36px;
-        font-size: 12px;
-        margin-top: 0;
-    }
-
-    .main-buttons .book-appointment {
-        margin-right: 24px;
-    }
-
-    /* ARROW STYLING */
-    .arrow {
-        display: none;
-    }
-}
-
 /* SIZE SCREENS 1366px/
 /* ********************************************** */
 @media only screen and (min-width: 1366px) {
-    #main-header {
-        display: none;
+    .desktop-navbar-container {
+        /* max-width: 1536px; */
+        width: 90%;
+        height: 104px;
     }
 
-    header {
-        height: 100vh;
+    .desktop-navbar-container .desktop-navbar img {
+        width: 100px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul {
+        font-size: 14px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul li {
+        margin-left: 30px;
+    }
+
+    .desktop-navbar-container .desktop-navbar button {
+        width: 196px;
+        height: 44px;
+        font-size: 12px;
+        margin-left: 32px;
+    }
+
+    .desktop-navbar-container .info {
+        width: 20%;
+    }
+
+    .desktop-navbar-container .info .mail img,
+    .desktop-navbar-container .info .phone img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .desktop-navbar-container .info .mail p,
+    .desktop-navbar-container .info .phone p {
+        font-size: 12px;
+    }
+
+    .desktop-navbar-container .info .social-media img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1.3fr 0.7fr 1fr;
+        grid-template-rows: 1fr 1.6fr 0.4fr;
+    }
+    
+    .hero-image-container { 
+        width: 75%; 
     }
 
     .hero-image-container img {
-        width: 450px;
-        top: -55%;
-        left: -27%;
+        width: 100%;
     }
 
-    /* MAIN TYTLE STYLING */
-    /*.hero-text h1 {
-        top: -400px;
-        left: 10%;
-        font-size: 140px;
+    .hero-text {
+        margin-bottom: 100px;
     }
-    */
-
-    #Layer_1 {
-        top: -400px;
-        ;
+    
+    .arrow img {
+        width: 16px;
     }
-
-    .hero-text p {
-        font-size: 22px;
-        top: -380px;
-        left: 34%;
-    }
-
+    
     /* MAIN BUTTONS STYLING */
     .main-buttons {
-        flex-direction: row;
-        justify-content: center;
-        width: 60%;
-        margin: 0;
-        position: absolute;
-        top: 17%;
-        left: 3%;
-    }
-    
-    .main-buttons .book-appointment {
-        margin-right: 24px;
-    }
-    
-    /* ARROW STYLING */
-
-    /* FOOTER */
-  
-}
-/* ****************** 1920px ********************** */
-
-@media screen and (min-width: 1536px) {
-    .desktop-navbar-container {
-        max-width: 1536px;
-        margin: 0 auto;
+        margin:100px;
     }
 
-    .desktop {
-        background-color: #8C7787;
-    }
-
-    .mini-navbar {
-        max-width: 1536px;
-    }
-
-    .mini-navbar .info-navbar {
-        width: 22%;
-    }
-
-    .mini-navbar .info-navbar .mail p,
-    .mini-navbar .info-navbar .phone p {
+    .main-buttons button {
+        width: 196px;
+        height: 44px;
         font-size: 12px;
-        margin-left: 8px;
     }
-
-    .mini-navbar img {
-        width: 14px;
-        height: 14px;
-    }
-
-    .some-navbar {
-        width: 5%;
-    }
-
-    /* desktop regular navbar */
+}
+/* ****************** 1536px ********************** */
+@media only screen and (min-width: 1366px) {
     .desktop-navbar-container {
-        width: 100%;
-        background-color: #8C7787;
-        height: 88px;
+        max-width: 1536px;
     }
 
-    .main-buttons .book-appointment {
-        margin-right: 24px;
+    .desktop-navbar-container .desktop-navbar ul {
+        font-size: 16px;
     }
 
-    /* ARROW STYLING */
-
-    /* FOOTER */
-
-
-    /* ****************** 1920px ********************** */
-
-    @media screen and (min-width: 1536px) {
-        .desktop-navbar-container {
-            max-width: 1536px;
-            margin: 0 auto;
-        }
-
-        .desktop {
-            background-color: #8C7787;
-        }
-
-        .mini-navbar {
-            max-width: 1536px;
-        }
-
-        .mini-navbar .info-navbar {
-            width: 22%;
-        }
-
-        .mini-navbar .info-navbar .mail p,
-        .mini-navbar .info-navbar .phone p {
-            font-size: 12px;
-            margin-left: 8px;
-        }
-
-        .mini-navbar img {
-            width: 14px;
-            height: 14px;
-        }
-
-        .some-navbar {
-            width: 5%;
-        }
-
-        /* desktop regular navbar */
-        .desktop-navbar-container {
-            width: 100%;
-            background-color: #8C7787;
-            height: 88px;
-        }
-
-        .desktop-navbar-container .desktop-navbar {
-            width: 100%;
-            height: 88px;
-            margin: 0 auto;
-        }
-
-        .desktop-navbar-container .desktop-navbar img {
-            width: 88px;
-        }
-
-        .desktop-navbar-container .desktop-navbar ul {
-            font-size: 16px;
-            margin-left: -560px;
-        }
-
-        .desktop-navbar-container .desktop-navbar ul li {
-            margin-right: 72px;
-        }
-
-        .desktop-navbar-container .desktop-navbar button {
-            width: 186px;
-            height: 36px;
-        }
-
-        /* HERO IMAGE STYLING */
-        .hero-image-container {
-            width: 385px;
-            /* top: -10%; */
-            /* left: 24%; */
-        }
-
-        .hero-image-container .square {
-            width: 385px;
-            height: 385px;
-            top: -70px;
-            left: 0;
-        }
-
-        .hero-image-container img {
-            width: 600px;
-            top: -70%;
-            left: -20%;
-        }
-
-        /* MAIN TYTLE STYLING */
-        /*.hero-text h1 {
-            top: -500px;
-            left: 15%;
-            font-size: 170px;
-        }
-        */
-
-        #Layer_1 {
-            top: -550px;
-            left: 12%;
-        }
-
-        .hero-text p {
-            font-size: 24px;
-            top: -500px;
-            left: 43%;
-        }
-
-        /* MAIN BUTTONS STYLING */
-        .main-buttons {
-            margin-left: 50px;
-            margin-top: 100px;
-        }
-
-        .main-buttons button {
-            width: 186px;
-            height: 36px;
-            font-size: 12px;
-        }
-
-        .main-buttons .book-appointment {
-            margin-right: 24px;
-        }
-
-        /* ARROW STYLING */
-        .arrow {
-            width: 18px;
-            margin: -200px auto;
-        }
-
-        .arrow img {
-            width: 18px;
-        }
-
-        /* MENU PAGE DARK STYLING */
-        aside {
-            display: none;
-        }
-
-        /* MAIN PAGE STYLING */
-        .offer-giftcard {
-            flex-direction: row;
-        }
-
-
-        /* SERVICES STYLING */
-        .services-container {
-            height: auto;
-            padding: 64px 0;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            gap: 80px;
-            margin: 80px 0;
-        }
-
-        .services h3 {
-            font-size: 18px;
-        }
-
-        .services-container img {
-            width: 160px;
-        }
-
-        .services-container button {
-            width: 186px;
-            height: 36px;
-            font-size: 12px;
-        }
-
-        /* INSTAGRAM STYLING */
-        .instagram-container {
-            height: auto;
-            padding: 64px 0;
-        }
-
-        .instagram-container h2 {
-            font-size: 32px;
-        }
-
-        .instagram-container .title {
-            margin-bottom: 56px;
-        }
-
-        .instagram-container .title h4 {
-            font-size: 16px;
-        }
-
-        .instagram-container button {
-            width: 186px;
-            height: 36px;
-            font-size: 12px;
-            margin-top: 56px;
-            border: 1px solid #8C7787;
-        }
-
-        /* REVIEWS STYLING */
-        .reviews-container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .reviews-container h2 {
-            font-family: 'Playfair Display';
-            font-size: 32px;
-            margin-top: -15%;
-        }
-
-        .reviews-container .review-text img {
-            display: block;
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .reviews-container .review-text {
-            position: relative;
-            margin-top: -60%;
-        }
-
-        .reviews-container .review-text p {
-            width: 60%;
-            font-family: 'Poppins Light';
-            font-size: 14px;
-            position: absolute;
-            top: 30%;
-            left: 22%;
-        }
-
-        .reviews-container h4 {
-            position: absolute;
-            bottom: 4%;
-            right: 20%;
-        }
-
-
-        /* FAQ STYLING */
-        #faq {
-            padding: 64px 0;
-        }
-
-        .faq {
-            margin-bottom: 32px;
-        }
-
-        .faq-container {
-            width: 50%;
-        }
-
-        .question-container {
-            width: 100%;
-        }
-
-        .question-container h3 {
-            font-size: 16px;
-        }
-
-        .question p {
-            font-size: 14px;
-        }
-
-        /* FOOTER STYLING */
-        #footer {
-            height: auto;
-        }
-
-        .footer-container {
-            max-width: 1536px;
-            width: 80%;
-            display: grid;
-            padding: 0;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            column-gap: 150px;
-        }
-
-        .business-hours h3,
-        .contact h3 {
-            font-size: 20px;
-            padding: 0 0 8px 0;
-            margin-bottom: 12px;
-        }
-
-        .days-hours,
-        .contact-details {
-            display: flex;
-            justify-content: space-between;
-            padding: 3px 0;
-        }
-
-        .days-hours h5,
-        .contact-details h5 {
-            font-family: 'Poppins Light';
-            font-size: 14px;
-        }
-
-        .days-hours p {
-            font-family: 'Poppins Light';
-            font-size: 14px;
-        }
-
-        .business-hours {
-            margin-top: 32px;
-        }
-
-        .contact {
-            margin-top: 32px;
-        }
-
-        .map {
-            margin: 20px 0 40px 0;
-            order: 2;
-        }
-
-
-        .terms {
-            margin-top: 32px;
-            align-items: flex-start;
-        }
-
-        .terms h5 {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-
-        .terms .social-icons img {
-            padding: 0 10px;
-        }
+    .desktop-navbar-container .desktop-navbar ul li {
+        margin-left: 30px;
+    }
+
+    .desktop-navbar-container .desktop-navbar button {
+        width: 206px;
+        height: 48px;
+        font-size: 14px;
+        margin-left: 48px;
+    }
+
+    .desktop-navbar-container .info {
+        width: 20%;
+    }
+
+    .desktop-navbar-container .info .mail img,
+    .desktop-navbar-container .info .phone img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .desktop-navbar-container .info .mail p,
+    .desktop-navbar-container .info .phone p {
+        font-size: 14px;
+    }
+
+    .desktop-navbar-container .info .social-media img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .hero-image-container { 
+        width: 70%; 
+    }
+    
+    .arrow img {
+        width: 16px;
+    }
+
+    .main-buttons button {
+        width: 206px;
+        height: 48px;
+        font-size: 14px;
     }
 }

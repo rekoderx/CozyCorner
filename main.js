@@ -27,15 +27,15 @@ $('.review-wrapper').slick({
     nextArrow: $('.next'),
     prevArrow: $('.prev'),
     responsive: [
-        {
-            breakpoint: 1600,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          },
+        // {
+        //     breakpoint: 1600,
+        //     settings: {
+        //       slidesToShow: 3,
+        //       slidesToScroll: 1,
+        //       infinite: true,
+        //       dots: true
+        //     }
+        // },
         {
           breakpoint: 1024,
           settings: {
