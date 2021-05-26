@@ -65,7 +65,7 @@
 
 .hero-text p {
     font-size: 18px;
-    width: 60%;
+    width: 100%;
 }
 
 .movie-container {
@@ -198,7 +198,7 @@
         width: 15%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
         justify-content: center;
     }
 
@@ -207,14 +207,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .desktop-navbar-container .info .mail img,
-    .desktop-navbar-container .info .phone img {
-        margin-right: 12px;
-        padding: 0;
-        width: 18px;
-        height: 18px;
     }
 
     .desktop-navbar-container .info .mail p,
@@ -230,13 +222,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    .desktop-navbar-container .info .social-media img {
-        width: 20px;
-        height: 20px;
-        margin-right: 12px;
-        margin-left: -.5px;
     }
     
     .header-container {
@@ -273,17 +258,14 @@
     .hero-image-container img {
         width: 110%;
     }
-    
-    /* .text-buttons .main-buttons {
-        margin-top: 32px;
-    } */
 
     .hero-text {
         margin-bottom: 120px;
+        width: 100%;
     }
 
     .hero-text p {
-        width: 75%;
+        width: 100%;
         margin-left: 90px;
     }
     
@@ -309,7 +291,8 @@
     
     .hero-text p {
         font-size: 18px;
-        width: 60%;
+        font-family: 'Poppins Light';
+        width: 80%;
     }
     
     .movie-container {
@@ -359,27 +342,32 @@
 /* MEDIA QUERIES 1366px */
 
 @media only screen and (min-width: 1366px) {
+    .desktop {
+        height: 104px;
+    }
+
+    .desktop .desktop-navbar-container {
+       height: 104px;
+       width: 90%;
+    }
+
     .desktop-navbar-container .desktop-navbar img {
         width: 100px;
     }
 
     .desktop-navbar-container .desktop-navbar ul {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .desktop-navbar-container .desktop-navbar ul li {
-        margin-left: 32px;
+        margin-left: 30px;
     }
 
     .desktop-navbar-container .desktop-navbar button {
-        width: 186px;
-        height: 46px;
+        width: 206px;
+        height: 48px;
         font-family: 'Poppins';
         font-size: 14px;
-    }
-
-    .nav_menu {
-        padding: 8px;
     }
 
     .desktop-navbar-container .info .mail img,

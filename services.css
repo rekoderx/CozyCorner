@@ -173,7 +173,7 @@
     }
 
     .main-image .img { 
-        width: 50%;
+        width: 60%;
         grid-area: area1;
     }
     
@@ -277,6 +277,10 @@
     .main-image .img { 
         max-width: 450px;
         width: 50%;
+    }
+
+    .desktop-navbar .info {
+        width: 15%;
     }
     
     .main-image .main-paragraph {
