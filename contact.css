@@ -35,11 +35,9 @@ body {
 
 /* Contact page styling for Iphone 6/7/8 */
 
-.hero-image-container{
-    
-}
+.hero-image-container {}
 
-.image_contact{
+.image_contact {
     width: 65%;
     margin-left: 15%;
     margin-top: 10%;
@@ -55,6 +53,25 @@ body {
     font-family: 'Poppins Light';
     width: 80%;
     margin: 0 auto;
+    margin-top: -23%;
+}
+
+.main-buttons {
+    
+}
+
+.services-prices{
+    
+}
+
+
+.arrow{
+    margin-top: 5%;
+    margin-left: 48%
+}
+
+.arrow_image{
+    width: 12px;
 }
 
 .hero_text_contact {
@@ -63,6 +80,11 @@ body {
     font-size: 14px;
     padding-top: 8%;
     padding-bottom: 6%;
+    
+}
+
+.business_contact_section{
+    margin-top: -10%;
 }
 
 /* text under the image end */
@@ -160,131 +182,190 @@ body {
 
 /* Contact me end */
 
+/* Iphone 5/SE start */
+@media screen and (min-width: 320px) and (min-height: 568px) {
+    
+    .main-buttons{
+        margin-top: -45%;
+    }
+    
+    .business_contact_section{
+        padding-top: 25%;
+    }
+    
+    .arrow_image{
+        margin-bottom: 15%;
+        
+    }
+}
+/* Iphone 5/SE end */
+    
+
+/* Iphone 6/7/8 plus start */
+@media screen and (min-width: 414px) and (min-height: 736px) {
+    
+    
+    .main-buttons{
+       margin-top: -60%;
+    }
+    
+    
+    .business_contact_section{
+        margin-top: -30%;
+    }
+    
+}
+
+/* Iphone 6/7/8 plus end */
+
+/* Iphone x start */
+@media screen and (min-width: 375px) and (min-height: 812px) {
+    .contact_text{
+        margin-top: -50%;
+    }
+    
+    .main-buttons{
+        margin-top: -90%;
+    }
+    
+    .business_contact_section{
+        margin-top: -60%;
+    }
+    
+}
+
+/* Iphone x end */
+
+/* Ipad start */
+@media screen and (min-width: 768px) and (min-height: 1024x) {
+    
+    .contact_image_desktop{
+        
+    }
+    
+    .image_contact{
+        
+    }
+    
+    .hero{
+        
+    }
+    
+    .contact_text{
+        width: 50%;
+    }
+    
+    .main-buttons{
+        
+    }
+    
+    
+}
+/* Ipad end */
+
+
 /* desktop 1024px start */
 @media only screen and (min-width: 1024px) {
 
     /* image,text,button start */
-    
+
     .hero-image-container {
         top: 40px;
         left: -20%;
     }
-    
-    .contact_text{
+
+    .contact_text {
         margin-right: 3%;
         margin-top: -35%;
         font-size: 20px;
         width: 40%;
         text-align: left;
-        
+
     }
-    
-    .services-prices{
-        
-    }
-    
-    .main-buttons{
+
+    .services-prices {}
+
+    .main-buttons {
         margin-left: 36%;
         margin-top: -2%;
     }
-    
-    .arrow{
-        
-    }
-    
-    #header{
+
+    .arrow {}
+
+    #header {
         margin-bottom: -10%;
     }
-     /* image,text,button end */
-    
-     /* business, contact desktop start */
-    
-    .business_hours{
+
+    /* image,text,button end */
+
+    /* business, contact desktop start */
+
+    .business_hours {
         width: 60%;
     }
-    
-    .contact_up{
+
+    .contact_up {
         width: 60%;
     }
-    
-    
-     /* business, contact desktop end */
-    
+
+
+    /* business, contact desktop end */
+
     /* contact form desktop start */
-    .form{
+    .form {
         width: 60%;
     }
-    
-    .button{
-         width: 200px;
-    height: 40px;
-    font-size: 16px;
+
+    .button {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
     }
-    
-    .contact_me_h3{
+
+    .contact_me_h3 {
         margin-top: -10%;
         margin-bottom: -5%;
         font-size: 30px;
     }
-    
-    .contact_me_p{
+
+    .contact_me_p {
         margin-bottom: -10%;
     }
+
     /* contact form desktop end */
-    
-     /* desktop contact image start */
-    .contact_image_desktop{
+
+    /* desktop contact image start */
+    .contact_image_desktop {
         width: 50%;
         margin-left: 3%;
         margin-top: 3%;
     }
-    
-    .button{
+
+    .button {
         margin-top: -5%;
         margin-bottom: -15%;
     }
+
     /* desktop contact image end */
 }
-   
+
 /* desktop 1024px end */
 
 @media only screen and (min-width: 1366px) {
-    
-    .main-buttons{
+
+    .main-buttons {
         margin-left: 29%;
-        margin-top:  20%;
+        margin-top: 20%;
     }
-    
-    .contact_text{
+
+    .contact_text {
         margin-right: 15%;
         width: 30%;
         margin-top: -30%;
     }
-    
-    .contact_image_desktop{
+
+    .contact_image_desktop {
         width: 40%;
         margin-left: 13%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
