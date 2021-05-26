@@ -1,0 +1,548 @@
+.text-buttons {
+    grid-area: area2;
+}
+
+.hero-text {
+    margin-top: 50px;
+}
+
+.hero-text p {
+    font-size: 12px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #F7F0F5;
+}
+
+.movie {
+    margin: 40px 0;
+}
+
+.movie video {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.movie-container h2,
+.diplomas h2 {
+    font-family: 'PLayfair Display';
+    font-size: 24px;
+}
+
+.movie-container p {
+    font-family: 'Poppins Light';
+    font-size: 14px;
+    width: 75%;
+    line-height: 1.6;
+}
+
+/* DIPLOMAS */
+.diplomas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.diplomas img {
+    margin-top: 40px;
+}
+
+/* MEDIA QUERIES 768px */
+
+.hero-text {
+    margin-top: 100px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    width: 60%;
+}
+
+.movie-container {
+    padding: 60px 0;
+}
+
+.movie {
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+}
+
+.movie::after {
+    display: block;
+    content: "";
+}
+
+
+.movie-container h2,
+.diplomas h2 {
+    font-family: 'PLayfair Display';
+    font-size: 32px;
+}
+
+.movie-container p {
+    font-family: 'Poppins Light';
+    font-size: 18px;
+    width: 75%;
+    line-height: 1.6;
+}
+
+/* DIPLOMAS */
+.diplomas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.diplomas img {
+    margin-top: 40px;
+    width: 60%;
+}
+
+/* MEDIA QUERIES 1024px */
+
+@media only screen and (min-width: 1024px) {x
+    /* desktop mini navbar */
+    #main-header {
+        display: none;
+    }
+
+    #header {
+        height: 100vh;
+    }
+
+    .desktop {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #8C7787;
+    }
+
+    .desktop-navbar-container {
+        width: 90%;
+        margin: 0 auto;
+        height: 88px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .desktop-navbar-container .desktop-navbar {
+        height: 88px;
+        /* margin: 0 auto; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .desktop-navbar-container .desktop-navbar img {
+        width: 80px;
+        display: block;
+        padding-top: 4px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        font-family: 'Playfair Display';
+        font-size: 14px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul li {
+        margin-left: 20px;
+    }
+
+    .desktop-navbar-container .desktop-navbar button {
+        width: 166px;
+        height: 36px;
+        font-family: 'Poppins';
+        font-size: 12px;
+        color: #fff;
+        background-color: #8C7787;
+        border: 2px solid white;
+    }
+
+    .nav_menu {
+        text-decoration: none;
+        color: #fff;
+        padding: 6px;
+    }
+
+    .nav_menu:hover {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        transition: all .2s ease-in-out;
+    }
+    
+    .active_menu {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+
+    .desktop-navbar-container .info {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .desktop-navbar-container .info .mail,
+    .desktop-navbar-container .info .phone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .desktop-navbar-container .info .mail img,
+    .desktop-navbar-container .info .phone img {
+        margin-right: 12px;
+        padding: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .desktop-navbar-container .info .mail p,
+    .desktop-navbar-container .info .phone p {
+        font-family: 'Poppins Light';
+        font-weight: 100;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .desktop-navbar-container .info .social-media {
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .desktop-navbar-container .info .social-media img {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        margin-left: -.5px;
+    }
+    
+    .header-container {
+        display: none;
+    }
+    
+    /* HERO IMAGE STYLING */
+    .hero {
+        height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 0.8fr 1fr;
+        grid-template-rows: 1fr 1.4fr 0.6fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "area1 area1 area2 area2"
+            "area1 area1 area2 area2"
+            "area3 area3 area3 area3";
+    }
+    
+    .hero-image-container { 
+        grid-area: area2;
+        margin: 0 auto;
+        width: 70%; 
+        align-self: flex-end;
+    }
+    
+    .text-buttons { 
+        grid-area: area1; 
+        align-self: flex-end;
+    }
+    
+    .hero-image-container img {
+        width: 110%;
+    }
+    
+    /* .text-buttons .main-buttons {
+        margin-top: 32px;
+    } */
+
+    .hero-text {
+        margin-bottom: 120px;
+    }
+
+    .hero-text p {
+        width: 75%;
+        margin-left: 90px;
+    }
+    
+    .tagline {
+        width: 100%;
+        text-align: right;
+        font-size: 20px;
+    }
+    
+    .arrow {
+        align-self: center;
+        grid-area: area3;
+        margin: 0 auto;
+    }
+    
+    .arrow img {
+        width: 12px;
+    }
+
+    .hero-text {
+        margin-top: 100px;
+    }
+    
+    .hero-text p {
+        font-size: 18px;
+        width: 60%;
+    }
+    
+    .movie-container {
+        padding: 60px 0;
+    }
+    
+    .movie {
+        position: relative;
+        overflow: hidden;
+        width: 45%;
+    }
+    
+    .movie::after {
+        display: block;
+        content: "";
+    }
+    
+    
+    .movie-container h2,
+    .diplomas h2 {
+        font-family: 'PLayfair Display';
+        font-size: 32px;
+    }
+    
+    .movie-container p {
+        font-family: 'Poppins Light';
+        font-size: 18px;
+        width: 60%;
+        line-height: 1.6;
+    }
+    
+    /* DIPLOMAS */
+    .diplomas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 80px 0;
+    }
+    
+    .diplomas img {
+        margin-top: 40px;
+        width: 60%;
+    }
+}
+
+/* MEDIA QUERIES 1366px */
+
+@media only screen and (min-width: 1366px) {
+    .desktop-navbar-container .desktop-navbar img {
+        width: 100px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul {
+        font-size: 18px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul li {
+        margin-left: 32px;
+    }
+
+    .desktop-navbar-container .desktop-navbar button {
+        width: 186px;
+        height: 46px;
+        font-family: 'Poppins';
+        font-size: 14px;
+    }
+
+    .nav_menu {
+        padding: 8px;
+    }
+
+    .desktop-navbar-container .info .mail img,
+    .desktop-navbar-container .info .phone img {
+        margin-right: 14px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .desktop-navbar-container .info .mail p,
+    .desktop-navbar-container .info .phone p {
+        font-size: 14px;
+    }
+
+    .desktop-navbar-container .info .social-media img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    /* HERO IMAGE STYLING */
+    
+    .hero-image-container {
+        width: 70%; 
+    }
+    
+    .hero-image-container img {
+        width: 100%;
+    }
+
+    .hero-text {
+        margin-bottom: 100px;
+    }
+
+    .hero-text p {
+        width: 75%;
+        margin-left: 170px;
+    }
+    
+    .arrow img {
+        width: 18px;
+    }
+    
+    .hero-text p {
+        font-size: 20px;
+        width: 70%;
+    }
+    
+    .movie-container {
+        padding: 80px 0;
+    }
+    
+    .movie {
+        width: 60%;
+    }
+    
+    .movie-container p {
+        font-size: 20px;
+    }
+    
+    /* DIPLOMAS */
+    
+    .diplomas img {
+        margin-top: 60px;
+        width: 50%;
+    }
+}
+
+/* MEDIA QUERIES 1536px */
+
+@media only screen and (min-width: 1536px) {
+
+    .desktop-navbar-container {
+        max-width: 1536px;
+        width: 90%;
+        height: 96px;
+    }
+
+    .desktop-navbar-container .desktop-navbar {
+        height: 96px;
+    }
+
+    .desktop-navbar-container .desktop-navbar img {
+        width: 88px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul {
+        font-size: 16px;
+    }
+
+    .desktop-navbar-container .desktop-navbar ul li {
+        margin-left: 40px;
+    }
+
+    .desktop-navbar-container .desktop-navbar button {
+        width: 206px;
+        height: 48px;
+        font-size: 14px;
+    }
+    
+    .active_menu {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+
+    .desktop-navbar-container .info .mail img,
+    .desktop-navbar-container .info .phone img {
+        margin-right: 14px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .desktop-navbar-container .info .mail p,
+    .desktop-navbar-container .info .phone p {
+        font-size: 14px;
+    }
+
+    .desktop-navbar-container .info .social-media img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    /* HERO IMAGE STYLING */
+    .hero-image-container {
+        width: 70%; 
+    }
+    
+    .hero-image-container img {
+        position: relative;
+        top: 100px;
+        width: 100%;
+    }
+
+    .hero-text p {
+        width: 75%;
+        margin-left: 315px;
+    }
+    
+    .arrow img {
+        width: 18px;
+    }
+    
+    .hero-text p {
+        font-size: 20px;
+        width: 70%;
+    }
+    
+    .movie-container {
+        padding: 100px 0;
+    }
+    
+    .movie {
+        width: 40%;
+    }
+    
+    
+    .movie-container h2,
+    .diplomas h2 {
+        font-size: 36px;
+    }
+    
+    .movie-container p {
+        font-size: 20px;
+        width: 50%;
+        line-height: 1.6;
+    }
+}

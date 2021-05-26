@@ -12,47 +12,59 @@
     
     <header id="header">
         <!-- MOBILE HEADER MENU -->
-        <div id="main-header">
-            <img src="./assets/images/logo.jpg" alt="logo image">
-            <div class="hamburger-menu">
-                <div class="line"></div>
-                <div class="line line2"></div>
-                <div class="line"></div>
+        <div class="header-container">
+            <div id="main-header">
+                <img src="./assets/images/logo.jpg" alt="logo image">
+                <div class="hamburger-menu">
+                    <div class="line"></div>
+                    <div class="line line2"></div>
+                    <div class="line"></div>
+                </div>
             </div>
         </div>
 
         <!-- DESKTOP HEADER MENU -->
-        <!-- mini navbar -->
-        <div class="mini-navbar">
-            <div class="info-navbar">
-                <div class="mail">
-                    <img src="./assets/images/mail.svg" alt="mail icon">
-                    <p>elena@cozycorner.dk</p>
-                </div>
-                <div class="phone">
-                    <img src="./assets/images/phone-call.svg" alt="phone icon">
-                    <p>+ (45) 12 34 56 78</p>
-                </div>
-            </div>
-            <div class="some-navbar">
-                <img src="./assets/images/facebook-icon.png" alt="instagram icon">
-                <img src="./assets/images/instagram-icon.png" alt="facebook icon">
-            </div>
-        </div>
-
         <!-- regular navbar -->
         <div class="desktop">
             <div class="desktop-navbar-container">
                 <div class="desktop-navbar">
-                    <img src="./assets/images/logo-white.svg" alt="white logo">
+                    <a class="main_logo" href="index.html"><img src="./assets/images/logo-white.svg" alt="white logo"></a>
                     <ul>
-                        <li>HOME</li>
-                        <li>SERVICES</li>
-                        <li>ABOUT</li>
-                        <li>CONTACT</li>
+                        <li>
+                            <a class="nav_menu active_menu" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="nav_menu" href="">SERVICES</a>
+                        </li>
+                        <li>
+                            <a class="nav_menu" href="">ABOUT</a>
+                        </li>
+                        <li>
+                            <a class="nav_menu" href="contact.html">CONTACT</a>
+                        </li>
+                        <li>
+                            <a class="nav_menu" href="contact.html"><button>BOOK APPOINTMENT</button></a>
+                        </li>
+
                     </ul>
-                    <button>BOOK APPOINTMENT</button>
                 </div>
+                <div class="info">
+                        <div class="mail">
+                            <img src="./assets/images/message-outline-128.png" alt="mail icon">
+                            <p>elena@cozycorner.dk</p>
+                        </div>
+                        <div class="phone">
+                            <img src="./assets/images/phone-30-128.png" alt="phone icon">
+                            <p>+ (45) 12 34 56 78</p>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/nails_and_lashes_by_elena/"><img src="./assets/images/instagram.svg" alt="instagram">
+                            </a>
+                            <a href="https://www.facebook.com/nailsandlashesbyelena">
+                                <img src="./assets/images/facebook.svg" alt="facebook">
+                            </a>
+                        </div>
+                    </div>
             </div>
         </div>
 
@@ -73,6 +85,20 @@
             </div>
         </div>
     </header>
+
+    <!-- MOBILE MENU PAGE -->
+    <aside>
+        <div id="main-header-dark">
+            <a href="index.html"><img src="./assets/images/logo-white.svg" alt="logo image"></a>
+            <p class="x">X</p>
+        </div>
+        <div class="menu-container">
+            <a href="index.html"><h2 class="home">Home</h2></a>
+            <a href="services.html"><h2>Service Menu</h2></a>
+            <a href="about.html"><h2>About</h2></a>
+            <a href="contact.html"><h2>Contact</h2></a>
+        </div>
+    </aside>
 
     <!-- SERVICES -->
     <main>
@@ -244,5 +270,6 @@
         </div>
     </footer>
 
+    <script src="./main.js"></script>
 </body>
 </html>

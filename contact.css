@@ -1,371 +1,351 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.header-container {
+    position: absolute;
+    width: 100%;
 }
 
-/* GENERAL RULES */
-body {
-    font-family: 'Poppins';
-    position: relative;
-    color: #555;
+.main-image {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.3fr 0.9fr 0.6fr .3fr;
+    grid-template-areas:
+      "area1"
+      "area2"
+      "area3"
+      "area4";
 }
 
-/* INSERTING FONTS */
-@font-face {
-    font-family: 'Creattion Demo';
-    src: url(./assets/fonts/Creattion-Demo.otf);
+.main-image .img { 
+    width: 70%;
+    grid-area: area1; 
+    align-self: flex-end;
+    margin: 0 auto;
 }
 
-@font-face {
-    font-family: 'Playfair Display';
-    src: url(./assets/fonts/PlayfairDisplay-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url(./assets/fonts/Poppins-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Poppins Light';
-    src: url(./assets/fonts/Poppins-Light.ttf);
-}
-
-/* Contact page styling for Iphone 6/7/8 */
-
-.hero-image-container {}
-
-.image_contact {
-    width: 65%;
-    margin-left: 15%;
-    margin-top: 10%;
-}
-
-/* text under the image start */
-
-.hero-text {
+.main-image .main-paragraph {
+    align-self: center;
     text-align: center;
-}
-
-.contact_text {
-    font-family: 'Poppins Light';
     width: 80%;
     margin: 0 auto;
-    margin-top: -23%;
+    grid-area: area2; 
+    font-family: 'Poppins Light';
+    font-size: 14px;
+}
+.main-image .main-buttons { 
+    align-self: flex-start;
+    grid-area: area3; 
+    margin: 0;
 }
 
-.main-buttons {
-    
+.main-image .main-buttons .book-appointment {
+    background-color: #fff;
+    color: #8C7787;
+    border: 1px solid #8C7787;
 }
 
-.services-prices{
-    
+.main-image .arrow {
+    grid-area: area4; 
+    align-self: flex-end;
 }
 
-
-.arrow{
-    margin-top: 5%;
-    margin-left: 48%
-}
-
-.arrow_image{
+.main-image .arrow img {
     width: 12px;
 }
 
-.hero_text_contact {
-    text-align: center;
-    font-family: 'Playfair Display';
-    font-size: 14px;
-    padding-top: 8%;
-    padding-bottom: 6%;
-    
+.main-image img {
+    width: 90%;
+    margin-bottom: 40px;
 }
 
-.business_contact_section{
-    margin-top: -10%;
-}
+/* BUSINESS HOURS SECTION */
 
-/* text under the image end */
-
-
-/* Button under the text start */
-/* Button under the text end */
-
-
-/* First business hours and contact start */
-
-
-.business_contact {
+.business_contact_section {
     background-color: #F7F0F5;
 }
 
-.business_hours {
-    width: 80%;
+.business_contact_section .business_contact {
+    width: 85%;
     margin: 0 auto;
-    padding: 32px 0;
-    font-family: 'Playfair Display';
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.contact_up {
-    width: 80%;
-    margin: 0 auto;
-    padding: 32px 0;
+.business_contact_section .business_contact h3 {
     font-family: 'Playfair Display';
+    font-size: 20px;
+    padding-bottom: 6px;
 }
 
 .hr {
-    color: #333333;
+    margin-bottom: 6px;
 }
 
-/* First business hours and contact end */
+.business_contact_section .business_contact .days_hours h5,
+.business_contact_section .business_contact .days_hours p {
+    font-size: 16px;
+}
 
-/* Contact me start */
-.contact_me_h3 {
+/* CONTACT SECTION */
+.title {
     font-family: 'Playfair Display';
-    padding-top: 15%;
-    padding-bottom: 7%
-}
-
-.contact_me_p {
-    font-family: 'Poppins Light';
-    padding-bottom: 15%;
-}
-
-.contact_me_div {
-    text-align: center;
-}
-
-.form {
+    font-size: 20px;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    font-family: 'Poppins Light';
-
-}
-
-.name {
-    margin-bottom: 8%;
-    height: 40px;
-}
-
-.email {
-    margin-bottom: 8%;
-    height: 40px;
-}
-
-.message {
-    height: 150px;
-    margin-bottom: 15%;
-}
-
-.button {
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
+}
+
+.title p {
+    font-family: 'Poppins Light';
+    font-size: 12px;
+    text-align: center;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.contact_container {
+    position: relative;
+    width: 100%;
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form {
+    position: relative;
+    width: 100%;
+    padding: 0 40px 60px;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .input50,
+.contact-form .input100 {
+    width: 100%;
+    /* margin: 0 10px; */
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.2);
+    color: #333;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+    margin: 10px 0;
+    resize: none;
+}
+
+.contact-form .row textarea {
+    height: 100px;
+}
+
+.contact-form .row input[type="submit"] {
     background-color: #8C7787;
     color: #fff;
-    border: none;
-    width: 166px;
-    height: 32px;
-    font-size: 11px;
-    font-family: 'Poppins Light';
-    margin: 0 auto;
-
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
 }
 
-.contact_me_section {
-    padding-bottom: 20%;
-}
 
-/* Contact me end */
+/* ********** MEDIA QUERIES  768px *********** */
+/* ********** MEDIA QUERIES  768px *********** */
+@media only screen and (min-width: 768px) {
 
-/* Iphone 5/SE start */
-@media screen and (min-width: 320px) and (min-height: 568px) {
-    
-    .main-buttons{
-        margin-top: -45%;
-    }
-    
-    .business_contact_section{
-        padding-top: 25%;
-    }
-    
-    .arrow_image{
-        margin-bottom: 15%;
-        
-    }
-}
-/* Iphone 5/SE end */
-    
-
-/* Iphone 6/7/8 plus start */
-@media screen and (min-width: 414px) and (min-height: 736px) {
-    
-    
-    .main-buttons{
-       margin-top: -60%;
-    }
-    
-    
-    .business_contact_section{
-        margin-top: -30%;
-    }
-    
-}
-
-/* Iphone 6/7/8 plus end */
-
-/* Iphone x start */
-@media screen and (min-width: 375px) and (min-height: 812px) {
-    .contact_text{
-        margin-top: -50%;
-    }
-    
-    .main-buttons{
-        margin-top: -90%;
-    }
-    
-    .business_contact_section{
-        margin-top: -60%;
-    }
-    
-}
-
-/* Iphone x end */
-
-/* Ipad start */
-@media screen and (min-width: 768px) and (min-height: 1024x) {
-    
-    .contact_image_desktop{
-        
-    }
-    
-    .image_contact{
-        
-    }
-    
-    .hero{
-        
-    }
-    
-    .contact_text{
-        width: 50%;
-    }
-    
-    .main-buttons{
-        
-    }
-    
-    
-}
-/* Ipad end */
-
-
-/* desktop 1024px start */
-@media only screen and (min-width: 1024px) {
-
-    /* image,text,button start */
-
-    .hero-image-container {
-        top: 40px;
-        left: -20%;
-    }
-
-    .contact_text {
-        margin-right: 3%;
-        margin-top: -35%;
-        font-size: 20px;
-        width: 40%;
-        text-align: left;
-
-    }
-
-    .services-prices {}
-
-    .main-buttons {
-        margin-left: 36%;
-        margin-top: -2%;
-    }
-
-    .arrow {}
-
-    #header {
-        margin-bottom: -10%;
-    }
-
-    /* image,text,button end */
-
-    /* business, contact desktop start */
-
-    .business_hours {
+    .main-image .img { 
         width: 60%;
     }
 
-    .contact_up {
+    .main-image .main-paragraph {
         width: 60%;
-    }
-
-
-    /* business, contact desktop end */
-
-    /* contact form desktop start */
-    .form {
-        width: 60%;
-    }
-
-    .button {
-        width: 200px;
-        height: 40px;
         font-size: 16px;
+        line-height: 1.6;
     }
 
-    .contact_me_h3 {
-        margin-top: -10%;
-        margin-bottom: -5%;
-        font-size: 30px;
+    .main-image .arrow img {
+        width: 16px;
     }
 
-    .contact_me_p {
-        margin-bottom: -10%;
+    /* BUSINESS HOURS SECTION */
+
+    .business_contact_section .business_contact {
+        width: 70%;
+        padding: 70px 0;
     }
 
-    /* contact form desktop end */
-
-    /* desktop contact image start */
-    .contact_image_desktop {
-        width: 50%;
-        margin-left: 3%;
-        margin-top: 3%;
+    .business_contact_section .business_contact h3 {
+        font-size: 28px;
+        padding-bottom: 8px;
     }
 
-    .button {
-        margin-top: -5%;
-        margin-bottom: -15%;
+    .hr {
+        margin-bottom: 8px;
     }
 
-    /* desktop contact image end */
+    .business_contact_section .business_contact .days_hours h5,
+    .business_contact_section .business_contact .days_hours p {
+        font-size: 20px;
+    }
+
+    /* CONTACT SECTION */
+    .title {
+        font-size: 20px;
+        margin-top: 70px;
+    }
+
+    .title p {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .contact_container {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    .contact-form .row input,
+    .contact-form .row textarea {
+        padding: 12px;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .contact-form .row textarea {
+        height: 130px;
+    }
+
+    .contact-form .row input[type="submit"] {
+        font-size: 20px;
+    }
 }
 
-/* desktop 1024px end */
 
-@media only screen and (min-width: 1366px) {
-
-    .main-buttons {
-        margin-left: 29%;
-        margin-top: 20%;
+/* ********** MEDIA QUERIES  1024px *********** */
+/* ********** MEDIA QUERIES  1024px *********** */
+@media only screen and (min-width: 1024px) {
+    .main-image {
+        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.8fr 0.8fr 0.4fr;
+        grid-template-areas:
+            "area1 area1 area2 area2"
+            "area1 area1 area2 area2"
+            "area3 area3 area3 area3"
+            "area4 area4 area4 area4"
+    }
+    
+    .main-image .main-paragraph {
+        width: 70%;
+        align-self: center;
+        margin: 140px 0 0 0;
+        grid-area: area2;
+        font-size: 18px;
+        text-align: left;
+    }
+    .main-image .main-buttons { 
+        align-self: center;
+        grid-area: area3; 
     }
 
-    .contact_text {
-        margin-right: 15%;
-        width: 30%;
-        margin-top: -30%;
+    .main-image .main-buttons button {
+        margin: 0;
     }
 
-    .contact_image_desktop {
-        width: 40%;
-        margin-left: 13%;
+    .main-image .arrow {
+        grid-area: area4;
+        align-self: center;
+    }
+
+    .main-image .img { 
+        width: 60%;
+    }
+
+    .main-image .main-paragraph {
+        width: 60%;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .main-image .arrow img {
+        width: 16px;
+    }
+
+    /* BUSINESS HOURS SECTION */
+    .business_contact_section .business_contact {
+        width: 50%;
+        padding: 70px 0;
+    }
+
+    .business_contact_section .business_contact h3 {
+        font-size: 28px;
+        padding-bottom: 8px;
+    }
+
+    .hr {
+        margin-bottom: 8px;
+    }
+
+    .business_contact_section .business_contact .days_hours h5,
+    .business_contact_section .business_contact .days_hours p {
+        font-size: 20px;
+    }
+
+    /* CONTACT SECTION */
+    .title {
+        font-size: 20px;
+        margin-top: 70px;
+    }
+
+    .title p {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .contact_container {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    .contact-form .row input,
+    .contact-form .row textarea {
+        padding: 12px;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .contact-form .row textarea {
+        height: 130px;
+    }
+
+    .contact-form .row input[type="submit"] {
+        font-size: 20px;
     }
 }

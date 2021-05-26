@@ -8,14 +8,13 @@
 /* GENERAL RULES */
 body {
     font-family: 'Poppins';
-    position: relative;
     color: #555;
 }
 
 /* INSERTING FONTS */
 @font-face {
     font-family: 'Creattion Demo';
-    src: url(./assets/fonts/Creattion-Demo.otf);
+    src: url(./assets/fonts/Creattion-Demo.ttf);
 }
 
 @font-face {
@@ -915,7 +914,6 @@ aside {
         margin: 20px 0 50px 0;
     }
 
-
     /* SERVICES STYLING */
     .services {
         gap: 30px;
@@ -940,11 +938,6 @@ aside {
         height: 736px;
     }
 
-    /* REVIEWS STYLING */
-
-    /* FAQ STYLING */
-
-    /* FOOTER STYLING */
     #footer {
         height: auto;
     }
@@ -986,7 +979,6 @@ aside {
     }
 
     /* MENU PAGE DARK STYLING */
-
     #main-header-dark {
         width: 80%;
     }
@@ -1085,26 +1077,6 @@ aside {
         height: 48px;
         font-size: 14px;
     }
-
-    /* REVIEWS STYLING */
-    /* .review-container {
-        height: auto;
-    }
-
-    .review-container h2 {
-        font-size: 40px;
-        margin-top: 15%;
-    }
-
-    .review-container .review-text {
-        position: relative;
-        margin: 40px 0 72px 0;
-    }
-
-    .review-container .review-text p {
-        font-size: 16px;
-    } */
-
 
     /* FAQ STYLING */
     #faq {
@@ -1315,11 +1287,6 @@ aside {
         margin-right: 12px;
         margin-left: -.5px;
     }
-
-    /* #header {
-        height: 100vh;
-        position: relative;
-    } */
     
     .header-container {
         display: none;

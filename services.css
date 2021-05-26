@@ -1,11 +1,44 @@
 .main-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.3fr 0.9fr 0.6fr .3fr;
+    grid-template-areas:
+      "area1"
+      "area2"
+      "area3"
+      "area4";
+}
+
+.main-image .img { 
+    width: 70%;
+    grid-area: area1; 
+    align-self: flex-end;
+    margin: 0 auto;
+}
+
+.main-image .main-paragraph {
+    align-self: center;
+    text-align: center;
     width: 80%;
     margin: 0 auto;
-    height: auto;
+    grid-area: area2; 
+    font-family: 'Poppins Light';
+    font-size: 14px;
+}
+.main-image .main-buttons { 
+    align-self: flex-start;
+    grid-area: area3; 
+    margin: 0;
+}
+
+.main-image .arrow {
+    grid-area: area4; 
+    align-self: flex-end;
+}
+
+.main-image .arrow img {
+    width: 12px;
 }
 
 .main-image img {
@@ -13,23 +46,7 @@
     margin-bottom: 40px;
 }
 
-.main-image p {
-    font-family: 'Poppins Light';
-    font-size: 14px;
-    width: 75%;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
 /* MANICURE SERVICE STYLING */
-header {
-    height: 100vh;
-}
-
-.main-image {
-    height: calc(100vh-106px);
-}
-
 .manicure-container,
 .japanese-lifting-container,
 .make-up-container {
@@ -122,10 +139,6 @@ header {
     width: 150px;
 }
 
-/* .lash-lifting-container .lash-lifting .lash-lifting-prices > div {
-    padding: 8px 0;
-} */
-
 /* JAPANESE LIFTING STYLING */
 .japanese-lifting-container,
 .make-up-container {
@@ -142,133 +155,140 @@ header {
 
 /* MEDIA QUERIES **********************************
 ***************************************************
-414px */
-@media only screen and (min-width: 414px) {
-    .main-image {
-        height: 761px;
-        justify-content: space-around;
-    }
-
-    .main-buttons {
-        margin-top: 0;
-    }
-}
-
-@media only screen and (min-width: 375px) and (min-height: 812px) {
-    .main-image {
-        height: 690px;
-        justify-content: space-around;
-    }
-
-    .main-buttons {
-        margin-top: 0;
-    }
-}
-
-@media only screen and (min-width: 414px) and (min-height: 736px) {
-    .main-image {
-        height: 618px;
-        justify-content: space-around;
-    }
-
-    .main-image .main-buttons {
-        margin-top: 0;
-    }
-}
-
-/* MEDIA QUERIES **********************************
-***************************************************
-600px */
-
-.main-image .img {
-    grid-area: item1;
-    width: 100%;
-    max-width: 362px;
-    margin: 0 auto;
-}
-
-/* MEDIA QUERIES **********************************
-***************************************************
 1024px */
 @media only screen and (min-width: 1024px) {
-    .mini-navbar .info-navbar {
-        width: 35%;
-    }
-
-    .mini-navbar .info-navbar .mail p,
-    .mini-navbar .info-navbar .phone p {
-        font-size: 12px;
-    }
-
-    .mini-navbar {
-        margin: 0 auto;
-        padding: 10px 0;
-    }
-
-    .mini-navbar .some-navbar {
-        width: 7%;
-    }
-
-    .mini-navbar .some-navbar img {
-        width: 24px;
-        height: 24px;
-    }
-    
     .main-image {
-        padding: 50px 0 0 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1.6fr 1fr 0.4fr;
-        column-gap: 100px;
-        grid-template-areas:
-            "item1 item2"
-            "item1 item4"
-            "item3 item3";
-    }
-
-    .main-image .img {
-        grid-area: item1;
+        height: 100vh;
         width: 100%;
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.8fr 0.8fr 0.4fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "area1 area1 area2 area2"
+            "area1 area1 area2 area2"
+            "area3 area3 area3 area3"
+            "area4 area4 area4 area4"
     }
 
+    .main-image .img { 
+        width: 50%;
+        grid-area: area1;
+    }
+    
     .main-image .main-paragraph {
-        grid-area: item2;
-        margin: 40px 0 0 0;
+        width: 70%;
         align-self: center;
-        font-size: 16px;
-        width: 90%;
+        margin: 140px 0 0 0;
+        grid-area: area2;
+        font-size: 18px;
         text-align: left;
-        line-height: 1.7;
+    }
+    .main-image .main-buttons { 
+        align-self: center;
+        grid-area: area3; 
     }
 
-    .main-image .main-buttons {
-        grid-area: item4;
-        align-self: stretch;
-        margin: 0;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .main-image .main-buttons .book-appointment {
-        margin: 0;
-        width: 186px;
-        height: 36px;
-        font-size: 12px;
-    }
-        
-    .arrow { 
-        grid-area: item3; 
-        align-self: flex-end;
-    }
-
-    .manicure-container .manicure .main-buttons .book-appointment,
-    .lash-lifting-container .lash-lifting .main-buttons .book-appointment,
-    .japanese-lifting-container .japanese-lifting .main-buttons .book-appointment,
-    .make-up-container .make-up .main-buttons .book-appointment {
+    .main-image .main-buttons button {
         margin: 0;
     }
 
+    .main-image .arrow {
+        grid-area: area4;
+        align-self: center;
+    }
+
+/* MANICURE SERVICE STYLING */
+    .manicure-container .manicure,
+    .lash-lifting-container .lash-lifting,
+    .japanese-lifting-container .japanese-lifting,
+    .make-up-container .make-up {
+        width: 50%;
+    }
+
+    .manicure-container,
+    .manicure-container .manicure {
+        height: 100vh;
+    }
+
+    .manicure-container .manicure img {
+        width: 120px;
+    }
+
+    .manicure-container .manicure h2,
+    .lash-lifting-container .lash-lifting h2,
+    .japanese-lifting-container .japanese-lifting h2,
+    .make-up-container .make-up h2 {
+        font-size: 32px;
+    }
+
+    .manicure-container .manicure p,
+    .lash-lifting-container .lash-lifting p,
+    .japanese-lifting-container .japanese-lifting p,
+    .make-up-container .make-up p {
+        font-size: 16px;
+    }
+
+    .manicure-container .manicure .manicure-prices,
+    .lash-lifting-container .lash-lifting .lash-lifting-prices,
+    .japanese-lifting-container .japanese-lifting .japanese-lifting-prices,
+    .make-up-container .make-up .make-up-prices {
+        width: 90%;
+    }
+
+    .manicure-container .manicure .buttons .book-appointment,
+    .lash-lifting-container .lash-lifting .buttons .book-appointment,
+    .japanese-lifting-container .japanese-lifting .buttons .book-appointment,
+    .make-up-container .make-up .buttons .book-appointment {
+        width: 206px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    /* LASH LIFTING SERVICE STYLING */
+    .lash-lifting-container .lash-lifting,
+    .japanese-lifting-container .japanese-lifting,
+    .make-up-container .make-up {
+        height: 650px;
+    }
+
+    .lash-lifting-container .lash-lifting img,
+    .japanese-lifting-container .japanese-lifting img,
+    .make-up-container .make-up img {
+        width: 200px;
+    }
+
+    /* JAPANESE LIFTING STYLING */
+    .japanese-lifting-container,
+    .make-up-container {
+        height: auto;
+    }
+
+    /* MAKE-UP STYLING */
+
+    .make-up-container {
+        height: auto;
+    }
+}
+
+/* MEDIA QUERIES FOR LARGE SCREENS */
+@media only screen and (min-width: 1536px) {
+    .main-image .img { 
+        max-width: 450px;
+        width: 50%;
+    }
+    
+    .main-image .main-paragraph {
+        width: 60%;
+        margin: 160px 0 0 0;
+    }
+
+    .main-image .arrow img {
+        width: 20px;
+    }
+
+/* MANICURE SERVICE STYLING */
     .manicure-container .manicure,
     .lash-lifting-container .lash-lifting,
     .japanese-lifting-container .japanese-lifting,
@@ -277,91 +297,3 @@ header {
     }
 }
 
-/* MEDIA QUERIES **********************************
-***************************************************
-1366px */
-@media only screen and (min-width: 1366px) {
-    .main-image {
-        max-width: 1536px;
-    }
-
-    .main-image .img {
-        max-width: 400px;
-    }
-
-    .main-image .main-paragraph {
-        width: 70%;
-    }
-
-    .main-image .main-buttons {
-        display: block;
-        position: static;
-    }
-
-    .manicure-container {
-        height: 100vh;
-    }
-
-    .japanese-lifting-container,
-    .lash-lifting-container,
-    .make-up-container {
-        /* height: 650px; */
-        height: auto;
-    }
-
-    .manicure-container .manicure,
-    .lash-lifting-container .lash-lifting,
-    .japanese-lifting-container .japanese-lifting,
-    .make-up-container .make-up {
-        height: 680px;
-        padding: 72px 0;
-        width: 40%;
-    }
-
-    .manicure-container .manicure {
-        height: 100vh;
-    }
-
-    .manicure-container .manicure img {
-        width: 110px;
-    }
-
-    .lash-lifting-container .lash-lifting img,
-    .japanese-lifting-container .japanese-lifting img,
-    .make-up-container .make-up img {
-        width: 180px;
-    }
-    
-    .manicure-container .manicure h2,
-    .lash-lifting-container .lash-lifting h2,
-    .japanese-lifting-container .japanese-lifting h2,
-    .make-up-container .make-up h2 {
-        font-size: 32px;
-    }
-
-    .manicure-container .manicure div p,
-    .lash-lifting-container .lash-lifting div p,
-    .japanese-lifting-container .japanese-lifting div p,
-    .make-up-container .make-up div p {
-        font-size: 14px;
-    }
-
-    .manicure-container .manicure .manicure-paragraph,
-    .lash-lifting-container .lash-lifting .lash-paragraph,
-    .japanese-lifting-container .japanese-lifting .japanese-paragraph,
-    .make-up-container .make-up .makeup-paragraph {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .manicure-container .manicure .manicure-prices,
-    .lash-lifting-container .lash-lifting .lash-lifting-prices,
-    .japanese-lifting-container .japanese-lifting .japanese-lifting-prices,
-    .make-up-container .make-up .make-up-prices {
-        margin: 40px 0;
-    }
-}
-
-@media only screen and (min-width: 1536px) {
-    
-}
