@@ -349,3 +349,110 @@
         font-size: 20px;
     }
 }
+
+
+/* 1366px */
+@media only screen and (min-width: 1366px) {
+    .main-image {
+        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 2fr 0.8fr 0.4fr;
+        grid-template-areas:
+            "area1 area1 area2 area2"
+            "area1 area1 area2 area2"
+            "area3 area3 area3 area3"
+            "area4 area4 area4 area4"
+    }
+    
+    .main-image .main-paragraph {
+        width: 70%;
+        align-self: center;
+        margin: 140px 0 0 0;
+        grid-area: area2;
+        font-size: 18px;
+        text-align: left;
+    }
+    .main-image .main-buttons { 
+        align-self: center;
+        grid-area: area3; 
+    }
+
+    .main-image .main-buttons button {
+        margin: 0;
+    }
+
+    .main-image .arrow {
+        grid-area: area4;
+        align-self: center;
+    }
+
+    .main-image .img { 
+        width: 62%;
+    }
+
+    .main-image .main-paragraph {
+        width: 75%;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .main-image .arrow img {
+        width: 16px;
+    }
+
+    /* BUSINESS HOURS SECTION */
+    .business_contact_section .business_contact {
+        width: 50%;
+        padding: 70px 0;
+    }
+
+    .business_contact_section .business_contact h3 {
+        font-size: 28px;
+        padding-bottom: 8px;
+    }
+
+    .hr {
+        margin-bottom: 8px;
+    }
+
+    .business_contact_section .business_contact .days_hours h5,
+    .business_contact_section .business_contact .days_hours p {
+        font-size: 20px;
+    }
+
+    /* CONTACT SECTION */
+    .title {
+        font-size: 20px;
+        margin-top: 70px;
+    }
+
+    .title p {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .contact_container {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    .contact-form .row input,
+    .contact-form .row textarea {
+        padding: 12px;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .contact-form .row textarea {
+        height: 130px;
+    }
+
+    .contact-form .row input[type="submit"] {
+        font-size: 20px;
+    }
+}

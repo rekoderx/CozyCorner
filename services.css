@@ -272,6 +272,19 @@
     }
 }
 
+/* MEDIA QUERIES **********************************
+***************************************************
+1366px */
+@media only screen and (min-width: 1024px) {
+    .main-image {
+        grid-template-rows: 2fr 2fr 0.8fr 0.4fr;
+    }
+
+    .main-image .img { 
+        width: 55%;
+    }
+}
+
 /* MEDIA QUERIES FOR LARGE SCREENS */
 @media only screen and (min-width: 1536px) {
     .main-image .img { 

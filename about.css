@@ -345,7 +345,7 @@
     
     .movie iframe {
         display: block;
-        width: 800px;
+        width: 700px;
         height: 400px;
         margin: 0 auto;
     }
@@ -379,7 +379,6 @@
 }
 
 /* MEDIA QUERIES 1366px */
-
 @media only screen and (min-width: 1366px) {
     .desktop {
         height: 104px;
@@ -427,7 +426,16 @@
     }
     
     /* HERO IMAGE STYLING */
-    
+    .hero {
+        grid-template-columns: 1fr 1.2fr 0.8fr 1fr;
+        grid-template-rows: 2.5fr 1.4fr 0.6fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "area1 area1 area2 area2"
+            "area1 area1 area2 area2"
+            "area3 area3 area3 area3";
+    }
+
     .hero-image-container {
         width: 70%; 
     }
@@ -450,20 +458,35 @@
     }
     
     .hero-text p {
-        font-size: 20px;
+        font-size: 18px;
         width: 70%;
-    }
-    
-    .movie-container {
-        padding: 80px 0;
+        text-align: left;
     }
     
     .movie {
-        width: 60%;
+        margin: 40px auto;
+        display: block;
+        width: 100%;
+    }
+    
+    .movie iframe {
+        display: block;
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .movie-container h2,
+    .diplomas h2 {
+        font-family: 'PLayfair Display';
+        font-size: 32px;
     }
     
     .movie-container p {
-        font-size: 20px;
+        font-family: 'Poppins Light';
+        font-size: 18px;
+        width: 50%;
+        line-height: 1.6;
     }
     
     /* DIPLOMAS */
@@ -549,8 +572,9 @@
     }
     
     .hero-text p {
-        font-size: 20px;
+        font-size: 18px;
         width: 70%;
+        text-align: left;
     }
     
     .movie-container {
