@@ -1487,8 +1487,8 @@ aside {
         position: relative;
         margin-top: -60%;
     }
-
-    .review-container p {
+    
+     .review-slider .review-wrapper .review .review-container p{
         width: 100%;
         font-family: 'Poppins Light';
         font-size: 16px;
