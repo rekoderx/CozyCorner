@@ -283,6 +283,16 @@
     .main-image .img { 
         width: 55%;
     }
+
+    #services button {
+        cursor: pointer;
+    }
+
+    #services button:hover {
+        background-color: #fff;
+        color: #8C7787;
+        border: 1px solid #8C7787;
+    }
 }
 
 /* MEDIA QUERIES FOR LARGE SCREENS */

@@ -1241,6 +1241,12 @@ aside {
         color: #fff;
         background-color: #8C7787;
         border: 2px solid white;
+        cursor: pointer;
+    }
+
+    .desktop-navbar-container .desktop-navbar button:hover {
+        color: #8C7787;
+        background-color: #fff;
     }
 
     .nav_menu {
@@ -1394,6 +1400,19 @@ aside {
         height: 44px;
         font-size: 12px;
         margin-left: 32px;
+        cursor: pointer;
+    }
+
+    .main-buttons .book-appointment:hover {
+        color: #8C7787;
+        background-color: #fff;
+        border: 1px solid #8C7787;
+    }
+
+    .main-buttons .services-prices:hover {
+        color: #fff;
+        background-color: #8C7787;
+        border: 1px solid #8C7787;
     }
 
     /* MAIN PAGE STYLING */
@@ -1434,6 +1453,13 @@ aside {
         width: 196px;
         height: 44px;
         font-size: 12px;
+        cursor: pointer;
+    }
+
+    .services-container button:hover {
+        background-color: #fff;
+        color: #8C7787;
+        border: 1px solid #8C7787;
     }
 
     /* INSTAGRAM STYLING */
@@ -1460,6 +1486,7 @@ aside {
         font-size: 12px;
         margin-top: 56px;
         border: 1px solid #8C7787;
+        cursor: pointer;
     }
 
     /* REVIEWS STYLING */

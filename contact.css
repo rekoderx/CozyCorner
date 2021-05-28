@@ -283,6 +283,11 @@
         width: 70%;
     }
 
+    .main-image .main-buttons button:hover {
+        color: #fff;
+        background-color: #8C7787;
+    }
+
     .main-image .main-paragraph {
         width: 75%;
         font-size: 18px;
